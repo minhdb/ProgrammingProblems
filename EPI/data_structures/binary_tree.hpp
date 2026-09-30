@@ -6,34 +6,27 @@
 #include <stdexcept>
 #include <utility>
 
-using std::unique_ptr;
-using std::weak_ptr;
-using std::shared_ptr;
-using std::pair;
-using std::make_pair;
-using std::make_shared;
-using std::vector;
-
 namespace data_structures
 {
 
 template <typename T>
 struct BinaryTreeNode
 {
-    BinaryTreeNode(T data) : data_(data), left_(nullptr), right_(nullptr), parent_(nullptr) {}
-    BinaryTreeNode(T data, 
-            shared_ptr<BinaryTreeNode<T>> l,
-            shared_ptr<BinaryTreeNode<T>> r)
-        : data_(data), left_(l), right_(r), parent_(nullptr) {}
+    BinaryTreeNode(T data) : data_(data), left_(nullptr), right_(nullptr), parent_() {}
+    BinaryTreeNode(T data,
+            std::shared_ptr<BinaryTreeNode<T>> l,
+            std::shared_ptr<BinaryTreeNode<T>> r)
+        : data_(data), left_(l), right_(r), parent_() {}
 
     BinaryTreeNode(T data,
-            shared_ptr<BinaryTreeNode<T>> l,
-            shared_ptr<BinaryTreeNode<T>> r,
-            shared_ptr<BinaryTreeNode<T>> p)
+            std::shared_ptr<BinaryTreeNode<T>> l,
+            std::shared_ptr<BinaryTreeNode<T>> r,
+            std::shared_ptr<BinaryTreeNode<T>> p)
         : data_(data), left_(l), right_(r), parent_(p) {}
 
     T data_;
-    shared_ptr<BinaryTreeNode<T>> left_, right_, parent_;
+    std::shared_ptr<BinaryTreeNode<T>> left_, right_;
+    std::weak_ptr<BinaryTreeNode<T>> parent_;
 };
 
 template <typename T>
@@ -51,17 +44,17 @@ public:
     ~BinarySearchTree() = default;
     BinarySearchTree& operator=(const BinarySearchTree& bst) = delete;
 
-    pair<shared_ptr<BinaryTreeNode<T>>, bool>
+    std::pair<std::shared_ptr<BinaryTreeNode<T>>, bool>
     Insert(T data)
     {
         if (Empty()) {
-            root_ = make_shared<BinaryTreeNode<T>>(data);
+            root_ = std::make_shared<BinaryTreeNode<T>>(data);
             n_++;
-            return make_pair(root_, true);
+            return std::make_pair(root_, true);
         } else {
             // Find a place to insert.
-            shared_ptr<BinaryTreeNode<T>> pParent(nullptr);
-            shared_ptr<BinaryTreeNode<T>> pTmp(root_);
+            std::shared_ptr<BinaryTreeNode<T>> pParent(nullptr);
+            std::shared_ptr<BinaryTreeNode<T>> pTmp(root_);
 
             while (pTmp != nullptr) {
                 pParent = pTmp;
@@ -71,11 +64,11 @@ public:
                     pTmp = pTmp->right_;
                 } else {
                     // Duplicate keys.
-                    return make_pair(pTmp, false);
+                    return std::make_pair(pTmp, false);
                 }
             }
 
-            shared_ptr<BinaryTreeNode<T>> new_node(make_shared<BinaryTreeNode<T>>(data));
+            std::shared_ptr<BinaryTreeNode<T>> new_node(std::make_shared<BinaryTreeNode<T>>(data));
             new_node->parent_ = pParent;
             if (pParent->data_ < data) {
                 pParent->right_ = new_node;
@@ -83,16 +76,16 @@ public:
                 pParent->left_ = new_node;
             }
             n_++;
-            return make_pair(new_node, true);
+            return std::make_pair(new_node, true);
         }
-        return make_pair(nullptr, false);
+        return std::make_pair(nullptr, false);
     }
 
     bool
     Delete(T data)
     {
-        shared_ptr<BinaryTreeNode<T>> pTmp(root_);
-        shared_ptr<BinaryTreeNode<T>> pParent(nullptr);
+        std::shared_ptr<BinaryTreeNode<T>> pTmp(root_);
+        std::shared_ptr<BinaryTreeNode<T>> pParent(nullptr);
 
         while (pTmp != nullptr && pTmp->data_ != data) {
             pParent = pTmp;
@@ -106,12 +99,12 @@ public:
         // Can't find that node.
         if (pTmp == nullptr) return false;
 
-        shared_ptr<BinaryTreeNode<T>> found_node = pTmp;
+        std::shared_ptr<BinaryTreeNode<T>> found_node = pTmp;
 
         if (found_node->right_ != nullptr) {
             // Find the minimum on the right subtree. i.e. the successor.
-            shared_ptr<BinaryTreeNode<T>> successor = found_node->right_;
-            shared_ptr<BinaryTreeNode<T>> successor_parent = found_node;
+            std::shared_ptr<BinaryTreeNode<T>> successor = found_node->right_;
+            std::shared_ptr<BinaryTreeNode<T>> successor_parent = found_node;
 
             while (successor->left != nullptr) {
                 successor_parent = successor;
@@ -143,28 +136,28 @@ public:
         return true;
     }
 
-    shared_ptr<BinaryTreeNode<T>>
+    std::shared_ptr<BinaryTreeNode<T>>
     FindMin() const
     {
         return FindMin(root_);
     }
 
-    shared_ptr<BinaryTreeNode<T>>
+    std::shared_ptr<BinaryTreeNode<T>>
     FindMax() const
     {
         return FindMax(root_);
     }
 
-    shared_ptr<BinaryTreeNode<T>>
+    std::shared_ptr<BinaryTreeNode<T>>
     FindSuccessor(T data)
     {
-        shared_ptr<BinaryTreeNode<T>> key_node = Find(data);
-        shared_ptr<BinaryTreeNode<T>> successor(nullptr);
+        std::shared_ptr<BinaryTreeNode<T>> key_node = Find(data);
+        std::shared_ptr<BinaryTreeNode<T>> successor(nullptr);
         if (key_node != nullptr) {
             if (key_node->right_ != nullptr) {
                 successor = FindMin(key_node->right_);
             } else {
-                shared_ptr<BinaryTreeNode<T>> pParent = key_node->parent;
+                std::shared_ptr<BinaryTreeNode<T>> pParent = key_node->parent;
                 while (pParent != nullptr && pParent->right_ == successor) {
                     successor = pParent;
                     pParent = pParent->parent;
@@ -176,22 +169,22 @@ public:
         return successor;
     }
 
-    shared_ptr<BinaryTreeNode<T>>
+    std::shared_ptr<BinaryTreeNode<T>>
     FindPredecessor(T data)
     {
 
     }
 
-    size_t 
+    size_t
     Size() const
     {
         return n_;
     }
 
-    shared_ptr<BinaryTreeNode<T>> 
+    std::shared_ptr<BinaryTreeNode<T>>
     Find(T data) const
     {
-        shared_ptr<BinaryTreeNode<T>> pTmp(root_);
+        std::shared_ptr<BinaryTreeNode<T>> pTmp(root_);
 
         while (pTmp != nullptr && pTmp->data_ != data) {
             if (data < pTmp->data_) {
@@ -204,32 +197,32 @@ public:
         return pTmp;
     }
 
-    bool 
+    bool
     Empty() const
     {
         return n_ == 0;
     }
 
-    void 
-    Inorder(vector<T>& inorder)
+    void
+    Inorder(std::vector<T>& inorder)
     {
         InorderHelper(root_, inorder);
     }
 
     void
-    Postorder(vector<T>& postorder)
+    Postorder(std::vector<T>& postorder)
     {
         PostorderHelper(root_, postorder);
     }
 
-    void 
-    Preorder(vector<T>& preorder)
+    void
+    Preorder(std::vector<T>& preorder)
     {
         PreorderHelper(root_, preorder);
     }
 
 private:
-    void InorderHelper(shared_ptr<BinaryTreeNode<T>>& node, vector<T>& inorder)
+    void InorderHelper(std::shared_ptr<BinaryTreeNode<T>>& node, std::vector<T>& inorder)
     {
         if (node != nullptr) {
             InorderHelper(node->left_, inorder);
@@ -238,7 +231,7 @@ private:
         }
     }
 
-    void PostorderHelper(shared_ptr<BinaryTreeNode<T>>& node, vector<T>& postorder)
+    void PostorderHelper(std::shared_ptr<BinaryTreeNode<T>>& node, std::vector<T>& postorder)
     {
         if (node != nullptr) {
             PostorderHelper(node->left_, postorder);
@@ -247,7 +240,7 @@ private:
         }
     }
 
-    void PreorderHelper(shared_ptr<BinaryTreeNode<T>>& node, vector<T>& preorder)
+    void PreorderHelper(std::shared_ptr<BinaryTreeNode<T>>& node, std::vector<T>& preorder)
     {
         if (node != nullptr) {
             preorder.emplace_back(node->data_);
@@ -256,27 +249,26 @@ private:
         }
     }
 
-    shared_ptr<BinaryTreeNode<T>> FindMin(const shared_ptr<BinaryTreeNode<T>>& tree)
+    std::shared_ptr<BinaryTreeNode<T>> FindMin(const std::shared_ptr<BinaryTreeNode<T>>& tree)
     {
-        shared_ptr<BinaryTreeNode<T>> min_node(tree);
+        std::shared_ptr<BinaryTreeNode<T>> min_node(tree);
         while (min_node->left_ != nullptr) {
             min_node = min_node->left_;
         }
         return min_node;
     }
 
-    shared_ptr<BinaryTreeNode<T>> FindMax(const shared_ptr<BinaryTreeNode<T>>& tree)
+    std::shared_ptr<BinaryTreeNode<T>> FindMax(const std::shared_ptr<BinaryTreeNode<T>>& tree)
     {
-        shared_ptr<BinaryTreeNode<T>> max_node(tree);
+        std::shared_ptr<BinaryTreeNode<T>> max_node(tree);
         while (max_node->right_ != nullptr) {
             max_node = max_node->right_;
         }
         return max_node;
     }
 
-    shared_ptr<BinaryTreeNode<T>> root_;
+    std::shared_ptr<BinaryTreeNode<T>> root_;
     size_t n_;
 };
 }
 #endif
-

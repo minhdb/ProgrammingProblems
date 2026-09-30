@@ -3,11 +3,6 @@
 
 #include <memory>
 
-using std::unique_ptr;
-using std::shared_ptr;
-using std::weak_ptr;
-using std::make_shared;
-
 namespace data_structures
 {
 template <typename T>
@@ -19,7 +14,8 @@ struct BSTNode
     BSTNode<T>& operator=(BSTNode<T>&) = delete;
 
     T data_;
-    shared_ptr<BSTNode<T>> left_, right_, parent_;
+    std::shared_ptr<BSTNode<T>> left_, right_;
+    std::weak_ptr<BSTNode<T>> parent_;
 };
 
 template<>
@@ -27,13 +23,14 @@ struct BSTNode<int>
 {
     BSTNode() {}
     BSTNode(int n) : data_(n) {}
-    BSTNode(int n, shared_ptr<BSTNode<int>> left, shared_ptr<BSTNode<int>> right)
+    BSTNode(int n, std::shared_ptr<BSTNode<int>> left, std::shared_ptr<BSTNode<int>> right)
         : data_(n), left_(left), right_(right) {};
     int data_;
-    shared_ptr<BSTNode<int>> left_, right_, parent_;
+    std::shared_ptr<BSTNode<int>> left_, right_;
+    std::weak_ptr<BSTNode<int>> parent_;
 };
 
-bool bst_equals(shared_ptr<BSTNode<int>>& tree1, shared_ptr<BSTNode<int>>& tree2)
+bool bst_equals(std::shared_ptr<BSTNode<int>>& tree1, std::shared_ptr<BSTNode<int>>& tree2)
 {
     if (tree1 == nullptr && tree2 == nullptr) { return true; }
     else if (tree1 != nullptr && tree2 != nullptr) {
@@ -45,7 +42,7 @@ bool bst_equals(shared_ptr<BSTNode<int>>& tree1, shared_ptr<BSTNode<int>>& tree2
     }
 };
 
-shared_ptr<BSTNode<int>> find(shared_ptr<BSTNode<int>>& tree, int value)
+std::shared_ptr<BSTNode<int>> find(std::shared_ptr<BSTNode<int>>& tree, int value)
 {
     if (tree == nullptr) {
         return nullptr;
@@ -60,7 +57,7 @@ shared_ptr<BSTNode<int>> find(shared_ptr<BSTNode<int>>& tree, int value)
     }
 };
 
-void insert(shared_ptr<BSTNode<int>> tree, int value)
+void insert(std::shared_ptr<BSTNode<int>> tree, int value)
 {
 };
 

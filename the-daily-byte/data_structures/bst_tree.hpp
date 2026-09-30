@@ -3,9 +3,6 @@
 
 #include "./bst_node.h"
 
-using std::shared_ptr;
-using std::unique_ptr;
-
 namespace data_structures
 {
 
@@ -36,12 +33,12 @@ public:
 
     void Delete(T value)
     {
-        
+
     };
 
-    shared_ptr<BSTNode<T>> Find(T value) const 
+    std::shared_ptr<BSTNode<T>> Find(T value) const
     {
-        return Find(value, root_);    
+        return Find(value, root_);
     };
 
     bool Empty() const
@@ -62,7 +59,7 @@ public:
 
     T ExtractMin()
     {
-        shared_ptr<BSTNode<T>> min = root_;
+        std::shared_ptr<BSTNode<T>> min = root_;
         while (min->left_ != nullptr) {
             min = min->left_;
         }
@@ -71,17 +68,17 @@ public:
 
     T ExtractMax()
     {
-        shared_ptr<BSTNode<T>> max = root_;
+        std::shared_ptr<BSTNode<T>> max = root_;
         while (max->right_ != nullptr) {
             max = max->right_;
         }
 
         return max->data_;
     }
-    
+
 private:
 
-    shared_ptr<BSTNode<T>> Find(T value, shared_ptr<BSTNode<T>> node) const
+    std::shared_ptr<BSTNode<T>> Find(T value, std::shared_ptr<BSTNode<T>> node) const
     {
         if (node == nullptr) return nullptr;
         if (value < node->data_) return Find(value, node->left_);
@@ -89,7 +86,7 @@ private:
         else return node;
     };
 
-    shared_ptr<BSTNode<T>> FindIteratively(T value, shared_ptr<BSTNode<T>> node) const
+    std::shared_ptr<BSTNode<T>> FindIteratively(T value, std::shared_ptr<BSTNode<T>> node) const
     {
         while (node != nullptr && node->data_ != value) {
             if (value < node->data_) {
@@ -103,7 +100,7 @@ private:
     }
 
 
-    unique_ptr<BSTNode<T>> root_;
+    std::unique_ptr<BSTNode<T>> root_;
     size_t n_;
 };
 };
