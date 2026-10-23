@@ -1,0 +1,4 @@
+# Editor configuration; the F5 mapping in ~/.vim/after/plugin/cpp-compile.vim
+# remains the actual build entry point.
+CompileFlags:
+  Add: [-std=gnu++20]
