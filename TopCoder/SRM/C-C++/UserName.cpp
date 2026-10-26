@@ -45,4 +45,4 @@ public:
 
 
 <%:testing-code%>
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

@@ -29,7 +29,8 @@ LANG: C++11
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: milk USACO
+/*
+ * Problem: milk USACO
  * Minh Bui
  */
 

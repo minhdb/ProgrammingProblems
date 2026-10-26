@@ -22,7 +22,8 @@
 using namespace std;
 
 
-/* TopCoder SRM 223 Div I Level 3
+/*
+ * TopCoder SRM 223 Div I Level 3
  * Minh Bui
  */
  

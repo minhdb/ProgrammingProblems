@@ -51,7 +51,7 @@ public:
     }
 
 private:
-    // Mersenne Twister algorithm. 
+    // Mersenne Twister algorithm.
     std::mt19937 random_engine_;
     std::uniform_int_distribution<int> distribution_;
 };

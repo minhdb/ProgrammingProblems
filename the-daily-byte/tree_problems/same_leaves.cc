@@ -5,7 +5,6 @@
  * Given 2 binary trees, return whether or not both trees have the same leaf
  * sequence. Two trees have the same leaf sequence if both trees' leaves read
  * the same from left to right.
- *
  */
 
 #include <memory>

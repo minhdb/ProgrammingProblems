@@ -115,7 +115,7 @@ vector<string> DecomposeIntoDictionaryWordsBF(const string& domain,
  * problem.
  *
  * We use the prefix of the string as our keys in the cache.
- * 
+ *
  * Time complexity: O(n^3)
  * Space complexity: O(n)
  */
@@ -213,7 +213,7 @@ int main()
 {
     string domain("amanaplanacanal");
     unordered_set<string> dictionary{"a", "man", "plan", "canal"};    
-    //PrintWords(DecomposeIntoDictionaryWords(domain, dictionary));
+    // PrintWords(DecomposeIntoDictionaryWords(domain, dictionary));
     PrintWords(DecomposeIntoDictionaryWordsBF(domain, dictionary));
     return 0;
 }

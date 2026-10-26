@@ -43,7 +43,7 @@ int main() {
         
         string rec;
         for (int j = 0; j < group[name]->n; ++j) {
-            //cin >> rec;
+            // cin >> rec;
             fin >> rec;
             if (group[name]->n != 0)
             {
@@ -55,7 +55,7 @@ int main() {
     
     for(auto b : arrayN) 
         fout << b << " " << (group[b])->current - (group[b])->init << endl;
-        //cout << b->first << " " << (b->second)->current << endl;
+        // cout << b->first << " " << (b->second)->current << endl;
     
     
     return 0;

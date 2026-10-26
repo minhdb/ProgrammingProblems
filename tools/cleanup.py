@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
 
-""" This program is created for the purpose of moving
-    solutions to solved problems into its correct directory.
+"""This program is created for the purpose of moving solutions to solved
+problems into its correct directory.
 
-    The program will look for
-    Minh Bui.
+The program will look for
+Minh Bui.
 """
 
 # Importing libaries and modules

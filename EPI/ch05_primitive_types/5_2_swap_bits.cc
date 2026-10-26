@@ -19,7 +19,7 @@
 #include <algorithm>
 
 /**
- * BF solution: Perform a check of i and j and ensure that 
+ * BF solution: Perform a check of i and j and ensure that
  *
  * i < j.
  *
@@ -51,7 +51,6 @@
  *
  * bit_j <<= i; 0000 0010
  * bit_i <<= j; 0000 0000
- *
  */
 long SwapBits(long x, int i, int j)
 {

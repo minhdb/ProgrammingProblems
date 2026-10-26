@@ -45,7 +45,7 @@ int remove_largest(vector<int>& stones)
     return max_ele;
 }
 
-    // 
+    //
     // 1. Search for the max and the 2nd max weight stones.
     // 2. Calculate the difference.
     //  if d = 0, set both stones to 0.

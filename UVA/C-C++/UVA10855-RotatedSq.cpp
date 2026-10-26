@@ -1,6 +1,6 @@
 /**
-* UVA 10855 Rotated Square
-*/
+ * UVA 10855 Rotated Square
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -97,7 +97,7 @@ int main() {
         
         char **r = s; 
         for (i = 0; i < 4; i++) {
-            //printGrid(r, n);
+            // printGrid(r, n);
             if (i < 3) printf("%d ", count(b, r, N, n));
             else printf("%d\n", count(b, r, N, n));
             r = rotate(r, n);

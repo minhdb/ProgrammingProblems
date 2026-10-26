@@ -14,8 +14,8 @@
  * Then, for each character in the string, remove it and check if the current
  * string is a palindrome.
  *
- * The time complexity is O(n^3) if removal of the character takes O(n). 
- * Can we do better? 
+ * The time complexity is O(n^3) if removal of the character takes O(n).
+ * Can we do better?
  */
 
 bool is_palindrome(const std::string &s, size_t i, size_t j)

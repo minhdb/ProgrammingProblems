@@ -10,8 +10,8 @@
  * the text of the Emancipation Proclamation should return
  *
  * My paramount object in this struggle is to <b><u>save</u> the <u>Union</u>
- * </b>, and is not either to save or to destroy slavery. If I could save the 
- * Union without freeing any slave I would do it, and if I could save it by 
+ * </b>, and is not either to save or to destroy slavery. If I could save the
+ * Union without freeing any slave I would do it, and if I could save it by
  * freeing all the slaves I would do it; and if I could save it by freeing some
  * and leaving others alone I would also do that.
  *

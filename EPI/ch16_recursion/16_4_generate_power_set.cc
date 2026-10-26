@@ -94,7 +94,7 @@ vector<vector<int>> GeneratePowerSetBitwise(const vector<int>& input_set)
 /**
  * Variant: Solve this problem when the input array may have duplicates, i.e.
  * denotes a multiset. You should not repeat any multiset.
- * 
+ *
  * Idea: sorting helps us identify duplicate subsets.
  *
  * Time complexity: O(n^2 2^n) since we need to compare 2 arrays.

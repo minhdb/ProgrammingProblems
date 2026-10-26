@@ -6,7 +6,6 @@
  * Given a list of positive numbers without duplicates and a target number,
  * find all unique combinations of the numbers that sum to the target.
  * Note: You may use the same number more than once.
- *
  */
 
 #include <vector>
@@ -62,7 +61,7 @@ int main()
     vector<vector<int>> tc1_res{{2, 2, 2}, {2, 4}, {3, 3}, {6}};
     vector<vector<int>> tc1_bt = unique_combination(tc1, tc1_n);
     std::sort(tc1_bt.begin(), tc1_bt.end());
-    //print_matrix(tc1_bt);
+    // print_matrix(tc1_bt);
     assert(tc1_bt == tc1_res);
     return 0;
 }

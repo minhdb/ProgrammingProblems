@@ -10,7 +10,7 @@
  *
  * In the abstract, we want a way to add an interval to a set of disjoint
  * intervals and represent the new set as a set of disjoint intervals. For
- * example, if the initial set of intervals is [-4, -1], [0, 2], [3, 6], 
+ * example, if the initial set of intervals is [-4, -1], [0, 2], [3, 6],
  * [7, 9], [11, 12], [14, 17], and the added interval is [1, 8], the result
  * is [-4, 1], [0, 9], [11, 12], [14, 17].
  *
@@ -45,8 +45,8 @@ struct Interval
 /**
  * Idea of BF solution: While there are at least 2 mergable intervals, keep merging
  *
- * Time complexity: 
- * Space complexity: 
+ * Time complexity:
+ * Space complexity:
  */
 vector<Interval> MergeIntervalsBF(const vector<Interval>& disjoint_intervals,
         Interval new_interval)

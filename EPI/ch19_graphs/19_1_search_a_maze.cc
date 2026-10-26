@@ -26,7 +26,7 @@ using std::vector;
 using std::string;
 using std::find;
 
-//typedef enum { WHITE, BLACK } Color;
+// typedef enum { WHITE, BLACK } Color;
 //
 
 enum class Color
@@ -98,7 +98,7 @@ bool IsFeasible(const vector<vector<Color>>& maze, const Coordinate& curr)
  * Constraints: Only can visit white colored cells and are in the maze.
  *
  * Goal: If we can reach a coordinate that equals Coordinate e.
- * 
+ *
  * Time complexity: O(V + E).
  * Space complexity: O(E)
  */

@@ -5,7 +5,7 @@ set(CMAKE_CXX_FLAGS "-g")
 
 project(ActualCodingProblems)
 
-#set(DATA_STRUCTURES ./data_structures/singly_linked_node.h ./data_structures/singly_linked_node.cc ./data_structures/bst_node.h)
+# set(DATA_STRUCTURES ./data_structures/singly_linked_node.h ./data_structures/singly_linked_node.cc ./data_structures/bst_node.h)
 
 # add_library(data_structures ${DATA_STRUCTURES})
 

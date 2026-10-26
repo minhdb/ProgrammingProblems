@@ -22,7 +22,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: Codeforce 535A
+/*
+ * Problem: Codeforce 535A
  * Minh Bui
  */
 
@@ -61,10 +62,10 @@ int main() {
     string s = "";
     int n;
     /*
-    for (int i = 1; i < 100; i++) {
-        cout << i << + " " + to_text(i) << endl;
-    }
-    */
+     * for (int i = 1; i < 100; i++) {
+     *     cout << i << + " " + to_text(i) << endl;
+     * }
+     */
     cin >> n;
     cout << to_text(n) << endl;
     return 0;

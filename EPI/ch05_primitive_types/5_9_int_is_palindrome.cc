@@ -7,7 +7,7 @@
  * string. For example, your program should return true for the inputs
  *
  * 0, 1, 7, 11, 121, 333, and 2147447412, and false for the inputs
- * 
+ *
  * -1, 12, 100, and 2147483647
  *
  *  Write a program that takes an integer and determines if that integer's
@@ -57,8 +57,8 @@ bool is_palindrome_number_reverse_solution(int n)
 bool is_palindrome_number(int n)
 {
     // To get the LSD: while (n) lsd = n % 10; n /= 10;
-    // To get the MSD: 
-    // while (n) 
+    // To get the MSD:
+    // while (n)
     //  msd = n / pow(10, num_digits(x) - 1);
     //  n   = n % pow(10, num_digits(x) - 1);
     if (n < 0) return false;

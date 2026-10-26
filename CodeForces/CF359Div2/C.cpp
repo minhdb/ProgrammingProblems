@@ -22,7 +22,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem:
+/*
+ * Problem:
  * Minh Bui
  */
 
@@ -69,7 +70,7 @@ int main() {
                     else {
                         string mi = string(len_m - min7.size(), '0') + min7;
                         if (isDist(h+mi)) {
-                            //cout << h + mi << endl;
+                            // cout << h + mi << endl;
                             c++;
                         }
                     }

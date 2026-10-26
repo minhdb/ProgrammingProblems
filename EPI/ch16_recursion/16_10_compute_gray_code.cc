@@ -40,7 +40,7 @@ bool differOnlyOneBit(int a, int b)
  *  +) First number starts with 0.
  *  +) Adjacent numbers differ in only 1 bit.
  *  +) First and last number should also differ in 1 bit.
- **/
+ */
 bool DirectedGrayCode(vector<int>& res, unordered_set<int>& history, int n)
 {
     if ((0x1 << n) == static_cast<int>(res.size())) {

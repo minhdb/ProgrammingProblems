@@ -29,11 +29,11 @@ Node<int>* return_mid_node(Node<int>*& head)
         tmp_node = tmp_node->next_;
     }
 
-    //printf("Count %zu\n", n);
+    // printf("Count %zu\n", n);
     if (n == 1) return head;
 
     n >>= 1;
-    //printf("Mid %zu\n", n);
+    // printf("Mid %zu\n", n);
     size_t i = 0; 
     tmp_node = head;
     while (i < n) {

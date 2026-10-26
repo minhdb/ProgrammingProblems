@@ -1,8 +1,8 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        """
-          O(n^2) time solution.
-          A better solution would be sorting the string: O(nlogn).
+        """O(n^2) time solution.
+
+        A better solution would be sorting the string: O(nlogn).
         """
         sTable = dict()
         for c in s:

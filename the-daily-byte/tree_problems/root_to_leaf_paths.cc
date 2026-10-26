@@ -59,7 +59,7 @@ vector<string> root_to_leaf_paths(const pTreeNode& root)
 
     root_to_leaf_paths_aux(root, res, "");
 
-    //print_vect(res);
+    // print_vect(res);
 
     return res;
 }

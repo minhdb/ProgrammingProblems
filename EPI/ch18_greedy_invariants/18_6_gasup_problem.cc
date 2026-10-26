@@ -32,7 +32,6 @@ using std::vector;
  *
  * Time complexity: O(n^2)
  * Space complexity: O(1)
- *
  */
 int GetAmpleCityBF(vector<vector<int>>& cities)
 {
@@ -66,9 +65,9 @@ int GetAmpleCityBF(vector<vector<int>>& cities)
  * Idea: Starts at the city such that the cost of gas to that city is largest.
  * Why? We know the total of gas required to travel all cities once equals
  * the refillable gas summed at all cities. We also assume the cost and refill
- * gas are non-negative. 
+ * gas are non-negative.
  *
- * Claim: To complete the final trip, which will cost most, we need to have 
+ * Claim: To complete the final trip, which will cost most, we need to have
  * enough gas gathered along the way.
  */
 int GetAmpleCity(vector<vector<int>>& cities)

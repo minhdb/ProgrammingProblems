@@ -69,7 +69,7 @@ bool DirectedContainsPattern(const vector<vector<int>>& grid,
         // element in the sequence.
         // Choice: Check other adjacent cells, we proceed if it equals the next
         // element in the pattern.
-        // Goal: idx == pattern.size(). 
+        // Goal: idx == pattern.size().
         if (IsMovable(grid, row, col, pattern[idx])) {
             for (const auto& d : kDirections) {
                 if (DirectedContainsPattern(grid, pattern, idx+1, row+d[0], col+d[1]))

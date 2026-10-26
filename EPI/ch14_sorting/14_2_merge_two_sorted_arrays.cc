@@ -11,7 +11,7 @@
  * <5, 13, 17, ., ., ., ., .>
  *
  * and
- * 
+ *
  * <3, 7, 11, 19> where . denotes an empty entry.
  *
  * Then the combined sorted entries can be stored in the first array as

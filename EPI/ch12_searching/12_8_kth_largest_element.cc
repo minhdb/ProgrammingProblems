@@ -117,7 +117,7 @@ int kthLargestElement(vector<int>& arr, int k)
  * Let n be the size of the array.
  *
  * If n is odd, then the median is the n/2 + 1 th largest element.
- * Else if n is even, then the median is the average of the 
+ * Else if n is even, then the median is the average of the
  * n/2 th and n/2 +1 1 th largest element.
  *
  * Time complexity: O(n) on average.

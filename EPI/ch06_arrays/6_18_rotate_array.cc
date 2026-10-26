@@ -35,7 +35,7 @@ void RotateArray(vector<vector<int>>& matrix)
             matrix[j][n - i - 1] = top_tmp;
             matrix[n - i - 1][n - j - 1] = right_tmp;
             matrix[n - j - 1][i] = bot_tmp;
-            //PrintMatrix(matrix);
+            // PrintMatrix(matrix);
         }
     }
 }

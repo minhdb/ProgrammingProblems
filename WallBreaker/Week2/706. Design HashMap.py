@@ -1,8 +1,8 @@
 class MyHashMap:
 
     def __init__(self):
-        """
-        Initialize your data structure here.
+        """Initialize your data structure here.
+
         Naive approach: Have the index as key and a list as values.
         put() - O(n) time - O(n) space
         get() - O(1) time
@@ -14,8 +14,8 @@ class MyHashMap:
 
 
     def put(self, key: int, value: int) -> None:
-        """
-        value will always be non-negative.
+        """value will always be non-negative.
+
         O(n) worst time complexity due to copying.
         """
         if key >= len(self.values):
@@ -24,8 +24,9 @@ class MyHashMap:
 
 
     def get(self, key: int) -> int:
-        """
-        Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
+        """Returns the value to which the specified key is mapped, or -1 if
+        this map contains no mapping for the key
+
         O(1) time complexity
         """
         if key < len(self.values) and self.values[key] != None:
@@ -34,8 +35,9 @@ class MyHashMap:
             return -1
 
     def remove(self, key: int) -> None:
-        """
-        Removes the mapping of the specified value key if this map contains a mapping for the key
+        """Removes the mapping of the specified value key if this map contains
+        a mapping for the key
+
         O(1) time complexity
         """
         if key < len(self.values):

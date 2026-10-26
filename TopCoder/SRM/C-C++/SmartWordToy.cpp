@@ -21,7 +21,8 @@
 
 using namespace std;
 
-/* TopCoder SRM 233 Div 1 Level 2
+/*
+ * TopCoder SRM 233 Div 1 Level 2
  * Minh Bui
  */
 
@@ -41,7 +42,7 @@ int SmartWordToy::minPresses(string start, string finish, vector<string> forbid)
     {
         string cur = q.front();
         q.pop();
-        //cout << "String: " << cur << " is dequed." << endl;
+        // cout << "String: " << cur << " is dequed." << endl;
         for (int i = 0; i < cur.size(); i++) {
             for (int j = 1; j >= -1; j -= 2) {
                 // State listing
@@ -50,7 +51,7 @@ int SmartWordToy::minPresses(string start, string finish, vector<string> forbid)
                 else if (curcopy[i] == 'z' && j == 1) curcopy[i] = 'a';
                 else curcopy[i] += j;
                 
-                //cout << curcopy << endl;
+                // cout << curcopy << endl;
                 for (int i = 0; i < forbid.size(); i++) {
                     istringstream c( forbid[i] );
                     string s; vector<string> fb;
@@ -62,7 +63,7 @@ int SmartWordToy::minPresses(string start, string finish, vector<string> forbid)
                        fb[3].find_first_of(curcopy[3]) != -1) 
                     {
                         graph[curcopy] = make_pair(-1, cur);
-                        //cout << "String: " << curcopy << " is not pushed.\n";
+                        // cout << "String: " << curcopy << " is not pushed.\n";
                         break;
                     }
                 }
@@ -70,7 +71,7 @@ int SmartWordToy::minPresses(string start, string finish, vector<string> forbid)
                 if (graph.find(curcopy) == graph.end()) {
                     if (curcopy == finish) return graph[cur].first + 1;
                     graph[curcopy] = make_pair(graph[cur].first + 1, cur);
-                    //cout << "String: " << curcopy << " is pushed.\n";
+                    // cout << "String: " << curcopy << " is pushed.\n";
                     q.push(curcopy);
                 } 
             }      

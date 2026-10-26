@@ -21,7 +21,7 @@
  *
  * 2. Given S = "CABABD" the function may return an empty string, because one
  * possible sequence of operations is:
- * 
+ *
  * CABABD -> CABD -> CD -> """
  *
  * 3. Given string S = "ACBDACBD" the function should return "ACBDACBD",
@@ -30,7 +30,6 @@
  * Write an efficient algorithm for the following assumptions:
  * The length of S is within the range [0..250,000];
  * String S consists only of the following characters: "A", "B", "C", and/or "D".
- *
  */
 
 #define MAX_SIZE 250001

@@ -1,4 +1,4 @@
-//#define _DEBUG
+// #define _DEBUG
 
 #include <unordered_map>
 #include <vector>
@@ -74,8 +74,8 @@ public:
     ~CoolVirtualMachine() = default;
 
     /*
-    * Dump the memory in hex of in mem_ to the output device.
-    */
+     * Dump the memory in hex of in mem_ to the output device.
+     */
     void PrintMemory(const IOStream& io_stream) const
     {
         io_stream.vm_out << "Total memory: " << vm_config_.memory_size_;
@@ -111,14 +111,14 @@ public:
     }
 
     /*
-        Get ASM instructions.
-    */
+     * Get ASM instructions.
+     */
     void GetInstructions(const IOStream& io_stream)
     {
         std::string asm_instruction;
         uint64_t start_addr = 0;
 
-        //TODO: Handle invalid input.
+        // TODO: Handle invalid input.
         while (std::getline(io_stream.vm_in, asm_instruction)) {
             #ifdef _DEBUG
             std::cout << asm_instruction << std::endl;
@@ -139,8 +139,8 @@ public:
                     case 8: width = 3; break;
                 }
 
-                //uint8_t width_char_copy = width_char;
-                //while (width_char_copy >>= 1) width++;
+                // uint8_t width_char_copy = width_char;
+                // while (width_char_copy >>= 1) width++;
 
                 op_code_encoded |= width;
 
@@ -172,44 +172,44 @@ public:
     }
 
     /*
-        Big Endian system: stores the MSB at the smallest
-            address and the LSB at the largest.
-
-        Assumption: Some of the test cases could overflow operands or results.
-
-        There are two possible solutions:
-        1. Truncate the result into [width] least significant bytes and place it
-        into memory. This is the current solution. It doesn't solve the problem.
-
-        2. Let the operands overflow into memory. Dangerous and harder to deal
-        with since we don't know how many bytes the result/operand overflow
-        into. Plus, the operands could be larger than a 64-bit signed long long
-        integer can represent.
-
-        So I decided to stick with the first solution instead.
-
-        Sure, we can extract a byte one by one and grow the stack pointer.
-
-        How to know when overflow happens?
-        When we shift right param by [width] bytes and param is still not zero.
-        We might be able to accomodate this by breaking the result into two
-        segments of 8 bytes with a total of 16 bytes to store the result.
-
-        If overflow happens, push the rest of the last 8 bytes onto the stack.
-
-        Example:
-        psh8 9999999999999999
-        psh8 9999999999999999
-        mlt8 2
-
-        // The stack should be empty here. But it's not going to be empty after
-        // an overflowed operation.
-        pop8
-        hlt2
-
-        What to do with invalid instructions? Such as popping from the stack when
-        there's nothing on the stack?
-    */
+     * Big Endian system: stores the MSB at the smallest
+     *     address and the LSB at the largest.
+     *
+     * Assumption: Some of the test cases could overflow operands or results.
+     *
+     * There are two possible solutions:
+     * 1. Truncate the result into [width] least significant bytes and place it
+     * into memory. This is the current solution. It doesn't solve the problem.
+     *
+     * 2. Let the operands overflow into memory. Dangerous and harder to deal
+     * with since we don't know how many bytes the result/operand overflow
+     * into. Plus, the operands could be larger than a 64-bit signed long long
+     * integer can represent.
+     *
+     * So I decided to stick with the first solution instead.
+     *
+     * Sure, we can extract a byte one by one and grow the stack pointer.
+     *
+     * How to know when overflow happens?
+     * When we shift right param by [width] bytes and param is still not zero.
+     * We might be able to accomodate this by breaking the result into two
+     * segments of 8 bytes with a total of 16 bytes to store the result.
+     *
+     * If overflow happens, push the rest of the last 8 bytes onto the stack.
+     *
+     * Example:
+     * psh8 9999999999999999
+     * psh8 9999999999999999
+     * mlt8 2
+     *
+     * // The stack should be empty here. But it's not going to be empty after
+     * // an overflowed operation.
+     * pop8
+     * hlt2
+     *
+     * What to do with invalid instructions? Such as popping from the stack when
+     * there's nothing on the stack?
+     */
     void ExecuteASM(const IOStream& io_stream)
     {
         uint64_t pc = 0;
@@ -238,7 +238,7 @@ public:
             }
 
             // Realign param due to the extra shift left at the end of the loop.
-            //param >>= 8U;
+            // param >>= 8U;
 
             #ifdef _DEBUG
             std::cout << op_code << " " << width << " " << param << std::endl;
@@ -326,13 +326,13 @@ public:
                     // adds: Pops (v1, v2, ..., vcount) from the stack, performs
                     // v1 + v2 + .. + vcount = Z and pushes Z back to the stack. Has param.
                     sum = PopHelper(sp, width);
-                    //printf("%ld\n", sum);
+                    // printf("%ld\n", sum);
                     param--;
                     while (param--) {
                         sum += PopHelper(sp, width);
                     }
 
-                    //printf("%ld\n", sum);
+                    // printf("%ld\n", sum);
                     // Need to build a mask here?
                     PushHelper(sp, sum, width);
 
@@ -383,9 +383,9 @@ private:
             if (i != width)
                 pop_val <<= 8U;
             // Don't need to zero out the memory.
-            //mem_[sp + i] &= 0;
+            // mem_[sp + i] &= 0;
         }
-        //pop_val >>= 8U;
+        // pop_val >>= 8U;
         sp += width;
 
         return pop_val;

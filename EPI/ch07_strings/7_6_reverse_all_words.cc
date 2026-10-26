@@ -31,7 +31,6 @@ using std::stack;
  *
  * Time complexity: O(n) with 2 passes. n is the number of characters.
  * Space complexity: O(n) with 1 stack and 1 copy of string.
- *
  */
 string reverse_all_words(string s)
 {
@@ -50,7 +49,7 @@ string reverse_all_words(string s)
     }
 
     res.pop_back();
-    //std::cout << res << std::endl;
+    // std::cout << res << std::endl;
     return res;
 }
 

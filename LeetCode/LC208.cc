@@ -94,7 +94,7 @@ int main()
      * ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
      *
      * [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
-    */
+     */
     Trie trie1;
     trie1.insert("apple");
     assert(trie1.search("apple"));

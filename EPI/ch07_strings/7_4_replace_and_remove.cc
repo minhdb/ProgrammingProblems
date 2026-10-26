@@ -81,12 +81,12 @@ string replace_and_remove_space(const string& s)
  */
 int replace_and_remove_opt(string& s)
 {
-    //std::cout << s << std::endl;
-    //int old_size = static_cast<int>(s.size());
+    // std::cout << s << std::endl;
+    // int old_size = static_cast<int>(s.size());
 
-    //int write_idx = 0;
+    // int write_idx = 0;
 
-    //for (size_t i = 0; i < s.size(); i++) {
+    // for (size_t i = 0; i < s.size(); i++) {
     //    if (s[i] == 'b') {
     //        write_idx = i;
     //        i++;
@@ -97,16 +97,16 @@ int replace_and_remove_opt(string& s)
     //            write_idx++;
     //        }
     //    }
-    //}
+    // }
     //
-    //std::cout << "After deleting bs: " << std::endl;
-    //std::cout << s << std::endl;
+    // std::cout << "After deleting bs: " << std::endl;
+    // std::cout << s << std::endl;
 
-    ///*
-    //for (int i = 0; i < old_size; i++) {
+    /// *
+    // for (int i = 0; i < old_size; i++) {
     //    if (s[i] == 'a') s[i] = 'd';
-    //}
-    //*/
+    // }
+    // */
 
     // Forward iteration: remove "b"s and count the number of "a"s
 

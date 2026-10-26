@@ -21,9 +21,9 @@ using std::vector;
 
 vector<unsigned long> generate_reverse_table()
 {
-    //long reverse_table_16_bits[2 >> 16];
+    // long reverse_table_16_bits[2 >> 16];
 
-    //long* reverse_table_16_bits = new long[2 >> 16];
+    // long* reverse_table_16_bits = new long[2 >> 16];
 
     vector<unsigned long> reverse_table_16_bits(1 << 16, 0);
 
@@ -38,7 +38,7 @@ vector<unsigned long> generate_reverse_table()
                             (reverse_table_4_bits[(i >> group) & mask] << group * 2) |
                             (reverse_table_4_bits[(i >> group * 2) & mask] << group) |
                             (reverse_table_4_bits[(i >> group * 3) & mask]);
-        //printf("Reverse of %lu is %lu\n", i, reverse_table_16_bits[i]);
+        // printf("Reverse of %lu is %lu\n", i, reverse_table_16_bits[i]);
     }
 
     return reverse_table_16_bits;

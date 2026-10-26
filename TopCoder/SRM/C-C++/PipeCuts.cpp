@@ -53,4 +53,4 @@ int main() {
 }
 
 
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

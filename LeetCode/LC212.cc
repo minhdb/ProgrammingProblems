@@ -24,10 +24,10 @@ void PrintMatrix(const vector<vector<T>>& m) {
 bool DirectedFindWords(vector<vector<char>>& board, const string& word,
                      string& cur_word, int row, int col, int letter_idx) {
         /**
-            Choice: We can go vertically or horizontally to match a letter in a word.
-            Constraints: The same letter cell may not be used more than once in a word.
-            Goal: Match all possible words.
-        */
+         * Choice: We can go vertically or horizontally to match a letter in a word.
+         * Constraints: The same letter cell may not be used more than once in a word.
+         * Goal: Match all possible words.
+         */
     if (cur_word == word) {
         return true;
     } else {

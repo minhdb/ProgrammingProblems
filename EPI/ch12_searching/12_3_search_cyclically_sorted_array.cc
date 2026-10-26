@@ -69,7 +69,7 @@ int main()
     assert(getSmallestIdx(tc1) == 4);
     assert(getSmallestIdxMod(tc1) == 4);
 
-    //assert(getSmallestIdx(tc2) == 0);
+    // assert(getSmallestIdx(tc2) == 0);
     assert(getSmallestIdxMod(tc2) == 0);
 
     assert(getSmallestIdx(tc3) == 6);

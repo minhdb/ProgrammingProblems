@@ -47,9 +47,9 @@ int main()
     Node<int>* tc1_l3 = construct_linked_list(tc1_v3);
 
     assert( linked_lists_equal(merge_linked_list(tc1_l1, tc1_l2), tc1_l3) );
-    //free_linked_list(tc1_l1);
-    //free_linked_list(tc1_l2);
-    //free_linked_list(tc1_l3);
+    // free_linked_list(tc1_l1);
+    // free_linked_list(tc1_l2);
+    // free_linked_list(tc1_l3);
 
 
     vector<int> tc2_v1{1, 3, 5};
@@ -61,9 +61,9 @@ int main()
     Node<int>* tc2_l3 = construct_linked_list(tc2_v3);
 
     assert( linked_lists_equal(merge_linked_list(tc2_l1, tc2_l2), tc2_l3) );
-    //free_linked_list(tc2_l1);
-    //free_linked_list(tc2_l2);
-    //free_linked_list(tc2_l3);
+    // free_linked_list(tc2_l1);
+    // free_linked_list(tc2_l2);
+    // free_linked_list(tc2_l3);
 
     vector<int> tc3_v1{4, 4, 7};
     vector<int> tc3_v2{1, 5, 6};
@@ -74,9 +74,9 @@ int main()
     Node<int>* tc3_l3 = construct_linked_list(tc3_v3);
 
     assert( linked_lists_equal(merge_linked_list(tc3_l1, tc3_l2), tc3_l3) );
-    //free_linked_list(tc3_l1);
-    //free_linked_list(tc3_l2);
-    //free_linked_list(tc3_l3);
+    // free_linked_list(tc3_l1);
+    // free_linked_list(tc3_l2);
+    // free_linked_list(tc3_l3);
 
     return 0;
 }

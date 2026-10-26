@@ -57,7 +57,7 @@ int main()
         {"a", "bcb", "a"},
         {"abcba"}
     };
-    //printMatrix(palindrome_splitting(tc1));
+    // printMatrix(palindrome_splitting(tc1));
     assert(palindrome_splitting(tc1) == tc1_res);
     return 0;
 }

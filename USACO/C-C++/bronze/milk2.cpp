@@ -29,7 +29,8 @@ LANG: C++11
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: milk2 USACO
+/*
+ * Problem: milk2 USACO
  * Minh Bui
  */
 
@@ -48,9 +49,10 @@ int main() {
 
     sort(segments.begin(), segments.end());
     /*
-    for (int i = 0; i < segments.size(); i++) {
-        fout << segments[i].first << " " << segments[i].second << endl;
-    }*/
+     * for (int i = 0; i < segments.size(); i++) {
+     *     fout << segments[i].first << " " << segments[i].second << endl;
+     * }
+     */
     int cont = segments[0].second - segments[0].first; 
     int idle = 0;
     pair<int, int> tmp = segments[0];

@@ -102,7 +102,7 @@ public class grafixMask {
 
     /**
      * For debug purpose.
-     * @param array 
+     * @param array
      */
     private static void printArray(int[] array) {
         for (int i = 0; i < array.length; i++) {

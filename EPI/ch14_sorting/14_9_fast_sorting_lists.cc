@@ -103,9 +103,9 @@ int main()
     PrintLinkedList(tc1_head);
     MergeSortList(&tc1_head);
 
-    //pListNode a = nullptr;
-    //pListNode b = nullptr;
-    //SplitList(tc1_head, a, b);
+    // pListNode a = nullptr;
+    // pListNode b = nullptr;
+    // SplitList(tc1_head, a, b);
     PrintLinkedList(tc1_head);
     return 0;
 }

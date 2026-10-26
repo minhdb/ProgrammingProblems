@@ -1,6 +1,6 @@
 /**
-* UVA 11340 - New spaper
-*/
+ * UVA 11340 - New spaper
+ */
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -23,7 +23,8 @@
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
 using namespace std;
-/* Problem: SRM 688 Division 2 level 2.
+/*
+ * Problem: SRM 688 Division 2 level 2.
  * Minh Bui
  */
 class AttackOfTheClones {

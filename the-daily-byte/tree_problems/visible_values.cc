@@ -26,7 +26,6 @@ vector<int> visible_values(pBSTNode root)
     vector<int> res_values;
 
     /**
-     *
      * Solution: Use a recursive algorithm.
      *
      * Base case 1: The current node is null, return empty list.

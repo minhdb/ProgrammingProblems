@@ -5,7 +5,6 @@
  * to t if it exists, otherwise, return ' '.
  * Note: You may assume that at most one additional character can be added to
  * t.
- *
  */
 
 #include <cassert>

@@ -124,7 +124,7 @@ int main()
        points.push_back(Point(x, y));
     }
 
-    //ConvexHull(points);
+    // ConvexHull(points);
     PrintPoints(ConvexHull(points));
 
     return 0;

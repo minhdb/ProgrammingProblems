@@ -37,7 +37,6 @@ void RearrangeElementsBF(vector<int>& arr)
 }
 
 /**
- *
  */
 void RearrangeElements(vector<int>& arr)
 {

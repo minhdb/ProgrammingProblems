@@ -15,7 +15,6 @@
  * Naive solution runs in O(y) where y is an int counting down.
  *
  * O(2^n) where n is the number of bits in integer types.
- *
  */
 double pow_brute_force(double x, int y)
 {

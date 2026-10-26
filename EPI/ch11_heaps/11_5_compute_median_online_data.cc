@@ -32,7 +32,6 @@ using std::vector;
 /**
  * Idea: Use min-heap to keep track of the upper half.
  * Use max-heap to keep track of the lower half.
- *
  */
 void OnlineMedian(istringstream& sequence)
 {

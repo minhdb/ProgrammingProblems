@@ -1,6 +1,6 @@
 /**
  * AC C++ Dev P3
- * 
+ *
  *
  * Let n be the exact score you need to win.
  * Let a be the number of arrows you have left.

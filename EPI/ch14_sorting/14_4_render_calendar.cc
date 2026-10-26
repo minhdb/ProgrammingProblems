@@ -79,7 +79,7 @@ int FindMaxConcurrentEventBF(const vector<Event>& A)
 }
 
 /**
- * Idea: Build an array of 2n points. Sort the points based on the time with 
+ * Idea: Build an array of 2n points. Sort the points based on the time with
  * starting points coming first.
  *
  * Time complexity: O(nlogn)
@@ -129,7 +129,7 @@ int main()
     Event e8 = {4, 5};
     Event e9 = {9, 17};
     vector<Event> tc1{e1, e2, e3, e4, e5, e6, e7, e8, e9};
-    //assert(FindMaxConcurrentEventEPI(tc1) == 3);
+    // assert(FindMaxConcurrentEventEPI(tc1) == 3);
     assert(FindMaxConcurrentEventBF(tc1) == 3);
     return 0;
 }

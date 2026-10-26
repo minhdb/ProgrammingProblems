@@ -105,7 +105,7 @@ void delete_dups_from_sorted_array_sorted(vector<int> &v)
  * O(n) space
  *
  * Use a hash table
- * */
+ */
 int delete_dups_from_sorted_array_hash_set(vector<int>& arr)
 {
     // Build the hash table.
@@ -161,7 +161,7 @@ int delete_dups_from_sorted_array(vector<int>& v)
     int write_idx = 1;
 
     for (size_t i = 1; i < n; i++) {
-        //printf("write_idx: %d\t%zu\n", write_idx, i);
+        // printf("write_idx: %d\t%zu\n", write_idx, i);
         if (v[write_idx - 1] != v[i]) {
             v[write_idx++] = v[i];
         }
@@ -175,11 +175,11 @@ int main()
 {
     vector<int> tc1     {2, 3, 5, 5, 7, 11, 11, 11, 13};
     vector<int> tc1_res {2, 3, 5, 7, 11,13, 14, 14, 14};
-    //delete_dups_from_sorted_array_brute_force(tc1);
-    //delete_dups_from_sorted_array(tc1);
-    //delete_dups_from_sorted_array_sorted(tc1);
-    //assert(tc1 == tc1_res);
-    //delete_dups_from_sorted_array(tc1);
+    // delete_dups_from_sorted_array_brute_force(tc1);
+    // delete_dups_from_sorted_array(tc1);
+    // delete_dups_from_sorted_array_sorted(tc1);
+    // assert(tc1 == tc1_res);
+    // delete_dups_from_sorted_array(tc1);
     print_vect(tc1);
     printf("Unique elements: 6\n");
     int result_tc1 = delete_dups_from_sorted_array_efficient(tc1);
@@ -189,11 +189,11 @@ int main()
 
     vector<int> tc2     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
     vector<int> tc2_res {1, 2, 2, 2, 2, 2, 2, 2, 2, 2};
-    //delete_dups_from_sorted_array_brute_force(tc2);
-    //delete_dups_from_sorted_array(tc2);
-    //delete_dups_from_sorted_array_sorted(tc2);
-    //assert(tc2 == tc2_res);
-    //delete_dups_from_sorted_array(tc2);
+    // delete_dups_from_sorted_array_brute_force(tc2);
+    // delete_dups_from_sorted_array(tc2);
+    // delete_dups_from_sorted_array_sorted(tc2);
+    // assert(tc2 == tc2_res);
+    // delete_dups_from_sorted_array(tc2);
     print_vect(tc2);
     printf("Unique elements: 1\n");
     int result_tc2 = delete_dups_from_sorted_array_efficient(tc2);

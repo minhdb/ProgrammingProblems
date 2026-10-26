@@ -45,7 +45,7 @@ public:
     void Enqueue(T x)
     { 
         inner_[back_] = x;
-        //std::cout << back_ << " " << x << "\n";
+        // std::cout << back_ << " " << x << "\n";
         back_++;
         // Check for boundaries.
         if (back_ == inner_.size()) {
@@ -224,43 +224,43 @@ int main()
     assert(!q.Empty());
     assert(q.Size() == 1);
     assert(q.Front() == 1);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
 
     printf("Enqueue 2\n");
     q.Enqueue(2);
     assert(!q.Empty());
     assert(q.Size() == 2);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
 
     printf("Dequeue 1\n");
     assert(q.Dequeue() == 1);
     assert(!q.Empty());
     assert(q.Size() == 1);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
 
     printf("Enqueue 3\n");
     q.Enqueue(3);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
 
     printf("Enqueue 4\n");
     q.Enqueue(4);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
 
     printf("Enqueue 5\n");
     q.Enqueue(5);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     assert(q.Size() == 4);
     q.PrintQueueContent();
 
     printf("Dequeue 2\n");
     assert(q.Dequeue() == 2);
     assert(q.Size() == 3);
-    //q.PrintQueueDebug();
+    // q.PrintQueueDebug();
     q.PrintQueueContent();
     
     printf("Dequeue 3\n");
@@ -281,7 +281,7 @@ int main()
 
     std::default_random_engine seed((std::random_device())());
     for (size_t i = 0; i < 20; i++) {
-        //int x = std::uniform_int_distribution<int>(0, 100)(seed);
+        // int x = std::uniform_int_distribution<int>(0, 100)(seed);
         int x = i;
         printf("Enqueue %d\n", x);
         q.Enqueue(x);
@@ -292,7 +292,7 @@ int main()
         int x = q.Front();
         printf("Dequeue %d\n", x);
         assert(q.Dequeue() == i);
-        //q.PrintQueueDebug();
+        // q.PrintQueueDebug();
 
         q.PrintQueueContent();
     }

@@ -34,8 +34,8 @@ vector<int> spiral_ordering(const vector<vector<int>>& m)
         }
         vinc++;
         
-        //printf("top\n");
-        //print_vect(result);
+        // printf("top\n");
+        // print_vect(result);
 
         // Right from top to bottom.
         for (int j = vinc; j < n-vinc; j++) {
@@ -43,24 +43,24 @@ vector<int> spiral_ordering(const vector<vector<int>>& m)
         }
         hinc++;
 
-        //printf("right\n");
-        //print_vect(result);
+        // printf("right\n");
+        // print_vect(result);
 
         // Bottom from right to left.
         for (int i = n - hinc; i >= hinc; i--) {
             result.emplace_back(m[n-hinc][i]);
         }
 
-        //printf("bottom\n");
-        //print_vect(result);
+        // printf("bottom\n");
+        // print_vect(result);
 
         // Left from down to top.
         for (int j = n - vinc; j >= vinc; j--) {
             result.emplace_back(m[j][vinc-1]);
         }
 
-        //printf("left\n");
-        //print_vect(result);
+        // printf("left\n");
+        // print_vect(result);
     }
 
     return result;
@@ -117,7 +117,7 @@ int main()
     };
     vector<int> tc5_res
     {1,2,3,4,5,6,12,18,24,30,36,35,34,33,32,31,25,19,13,7,8,9,10,11,17,23,29,28,27,26,20,14,15,16,22, 21};
-    //printf("%zu\n", tc5_res.size());
+    // printf("%zu\n", tc5_res.size());
     assert(spiral_ordering(tc5) == tc5_res);
 
     return 0;

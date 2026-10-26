@@ -23,7 +23,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem:B
+/*
+ * Problem:B
  * Minh Bui
  */
 
@@ -42,19 +43,19 @@ int main() {
     }
 
     /*
-    n = 100000; m = 1; r = 1;
-    for (int i = 0; i < n; i++) {
-        s = rand() % 801;
-        t[r-1].push_back(make_pair(s, to_string(i)));
-        cout << "Added: " << to_string(i) << " " << s <<endl;
-    }
-    */
+     * n = 100000; m = 1; r = 1;
+     * for (int i = 0; i < n; i++) {
+     *     s = rand() % 801;
+     *     t[r-1].push_back(make_pair(s, to_string(i)));
+     *     cout << "Added: " << to_string(i) << " " << s <<endl;
+     * }
+     */
     for (int i = 0; i < m; i++) {
-        //cout << "Accessing element at: " << i << endl;
+        // cout << "Accessing element at: " << i << endl;
         vector < pair <int, string > > r = t[i];
-        //cout << "Still here." << endl;
+        // cout << "Still here." << endl;
         sort(r.rbegin(), r.rend());
-        //cout << "Sorting complete." <<endl;
+        // cout << "Sorting complete." <<endl;
         if (r.size() > 2)
             if (r[1].first == r[2].first) { 
                 cout << "?" << endl; continue;}

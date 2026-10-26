@@ -22,7 +22,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: Codeforces 133A
+/*
+ * Problem: Codeforces 133A
  * Minh Bui
  */
 

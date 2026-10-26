@@ -4,7 +4,6 @@
  * Given a binary tree, return its zig-zag level order traversal (i.e. its level
  * order traversal from left to right the first level, right to left the level
  * of the second, etc)
- *
  */
 
 #include <vector>
@@ -72,24 +71,24 @@ vector< vector<int> > zigzag_level_order(const pBSTNode& tree)
             zigzag[cur_level].emplace_back(cur_node->data_);
         }
         /*
-        if (cur_level % 2 == 0) {
-            if (cur_node->left_ != nullptr) {
-                q.emplace(make_pair(cur_node->left_, cur_level + 1));
-            }
-
-            if (cur_node->right_ != nullptr) {
-                q.emplace(make_pair(cur_node->right_, cur_level + 1));
-            }
-        } else {
-            if (cur_node->right_ != nullptr) {
-                q.emplace(make_pair(cur_node->right_, cur_level + 1));
-            }
-
-            if (cur_node->left_ != nullptr) {
-                q.emplace(make_pair(cur_node->left_, cur_level + 1));
-            }
-        }
-        */
+         * if (cur_level % 2 == 0) {
+         *     if (cur_node->left_ != nullptr) {
+         *         q.emplace(make_pair(cur_node->left_, cur_level + 1));
+         *     }
+         *
+         *     if (cur_node->right_ != nullptr) {
+         *         q.emplace(make_pair(cur_node->right_, cur_level + 1));
+         *     }
+         * } else {
+         *     if (cur_node->right_ != nullptr) {
+         *         q.emplace(make_pair(cur_node->right_, cur_level + 1));
+         *     }
+         *
+         *     if (cur_node->left_ != nullptr) {
+         *         q.emplace(make_pair(cur_node->left_, cur_level + 1));
+         *     }
+         * }
+         */
 
         if (cur_node->left_ != nullptr) {
             q.emplace(make_pair(cur_node->left_, cur_level + 1));
@@ -123,7 +122,7 @@ int main()
 
     vector<vector<int>> tc1_res {{1}, {3, 2}};
     print_matrix(zigzag_level_order(tc1_root));
-    //assert(zigzag_level_order(tc1_root) == tc1_res);
+    // assert(zigzag_level_order(tc1_root) == tc1_res);
 
     // Test case 2.
     pBSTNode tc2_root       (new BSTNode<int>);
@@ -145,7 +144,7 @@ int main()
 
     vector<vector<int>> tc2_res {{8}, {29, 2}, {3, 9}};
     print_matrix(zigzag_level_order(tc2_root));
-    //assert(zigzag_level_order(tc2_root) == tc2_res);
+    // assert(zigzag_level_order(tc2_root) == tc2_res);
 
     // Test case 3.
     pBSTNode tc3_root       (new BSTNode<int>);
@@ -179,7 +178,7 @@ int main()
 
     vector<vector<int>> tc3_res {{1}, {3, 2}, {4, 5, 6, 7}, {9, 8}};
     print_matrix(zigzag_level_order(tc3_root));
-    //assert(zigzag_level_order(tc3_root) == tc3_res);
+    // assert(zigzag_level_order(tc3_root) == tc3_res);
 
     return 0;
 }

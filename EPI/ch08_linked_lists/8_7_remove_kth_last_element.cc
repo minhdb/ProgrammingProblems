@@ -66,15 +66,14 @@ void DeleteKthLastElementEPI(pListNode& head, size_t k)
         p_second = p_second->getNext();
     }
 
-    //if (p_second == dummy) {
+    // if (p_second == dummy) {
     //    head = head->getNext();
-    //} else {
+    // } else {
         p_second->setNext(p_second->getNext()->getNext());
-    //}
+    // }
 }
 
 /**
- *
  * Calculating the length of the linked list here. Slow because we need to
  * traverse the linked list twice. Assuming we have 1000000 list nodes and
  * and k 92139th, it's not fast enough.
@@ -126,7 +125,7 @@ int main()
     tc1_n3->setNext(tc1_n4);
 
     size_t tc1_k = 5;
-    //DeleteKthLastElement(tc1_head, tc1_k);
+    // DeleteKthLastElement(tc1_head, tc1_k);
     DeleteKthLastElementEPI(tc1_head, tc1_k);
     PrintLinkedList(tc1_head);
     

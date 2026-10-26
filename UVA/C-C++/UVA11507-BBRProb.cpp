@@ -19,22 +19,22 @@ int main() {
     int l = 1, n = 0; 
     string s, op, last, mid;
     /*
-    map< string, map< string, string > > table;
-    table["+x"]["+y"]["+z"] = "+z";
-    table["+x"]["+y"]["-z"] = "-z";
-    table["+x"]["-y"]["+z"] = "+z";
-    table["+x"]["-y"]["-z"] = "-z";
-    
-    table["+y"]["+x"]["+z"] = "+z";
-    table["+y"]["+x"]["-z"] = "-z";
-    table["+y"]["-x"]["+z"] = "+z";
-    table["+y"]["-x"]["-z"] = "-z";
-    
-    table["+z"]["+y"]["+z"] = "-z";
-    table["+z"]["+y"]["-z"] = "+z";
-    table["+z"]["-y"]["+z"] = "-z";
-    table["+z"]["-y"]["-z"] = "+z";
-    */
+     * map< string, map< string, string > > table;
+     * table["+x"]["+y"]["+z"] = "+z";
+     * table["+x"]["+y"]["-z"] = "-z";
+     * table["+x"]["-y"]["+z"] = "+z";
+     * table["+x"]["-y"]["-z"] = "-z";
+     *
+     * table["+y"]["+x"]["+z"] = "+z";
+     * table["+y"]["+x"]["-z"] = "-z";
+     * table["+y"]["-x"]["+z"] = "+z";
+     * table["+y"]["-x"]["-z"] = "-z";
+     *
+     * table["+z"]["+y"]["+z"] = "-z";
+     * table["+z"]["+y"]["-z"] = "+z";
+     * table["+z"]["-y"]["+z"] = "-z";
+     * table["+z"]["-y"]["-z"] = "+z";
+     */
     while (l != 0) {
     	cin >> l;
     	last = "+x"; mid = "+x"; op = "";

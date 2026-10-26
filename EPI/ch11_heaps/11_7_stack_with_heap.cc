@@ -35,7 +35,6 @@ using std::vector;
  * Add 1 to it. And set it to be the priority score of the new object.
  *
  * Use a max_heap here. A min_heap is also possible.
- *
  */
 
 template <class T>

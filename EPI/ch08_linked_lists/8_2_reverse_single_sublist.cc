@@ -118,11 +118,11 @@ pListNode ReverseSublistSolution(pListNode LL, int start, int finish)
 int main()
 {
     /*
-    * Test case 1.
-    * 11 -> 3 -> 5 -> 7 -> 2
-    *
-    * 11 -> 7 -> 5 -> 3 -> 2
-    */
+     * Test case 1.
+     * 11 -> 3 -> 5 -> 7 -> 2
+     *
+     * 11 -> 7 -> 5 -> 3 -> 2
+     */
     pListNode tc1_head      (new ListNode<int>(11));
     pListNode tc1_n1        (new ListNode<int>(3));
     pListNode tc1_n2        (new ListNode<int>(5));
@@ -134,17 +134,17 @@ int main()
     tc1_n2->setNext(tc1_n3);
     tc1_n3->setNext(tc1_n4);
     PrintList(tc1_head);
-    //ReverseSublist(tc1_head, 2, 4);
+    // ReverseSublist(tc1_head, 2, 4);
     ReverseSublistSolution(tc1_head, 2, 4);
     PrintList(tc1_head);
     printf("\n");
 
     /*
-    * Test case 2.
-    * 11 -> 3 -> 5 -> 7 -> 9 -> 2
-    *
-    * 11 -> 9 -> 7 -> 5 -> 3 -> 2
-    */
+     * Test case 2.
+     * 11 -> 3 -> 5 -> 7 -> 9 -> 2
+     *
+     * 11 -> 9 -> 7 -> 5 -> 3 -> 2
+     */
     pListNode tc2_head      (new ListNode<int>(11));
     pListNode tc2_n1        (new ListNode<int>(3));
     pListNode tc2_n2        (new ListNode<int>(5));
@@ -158,12 +158,13 @@ int main()
     tc2_n3->setNext(tc2_n4);
     tc2_n4->setNext(tc2_n5);
     PrintList(tc2_head);
-    //ReverseSublist(tc2_head, 2, 5);
+    // ReverseSublist(tc2_head, 2, 5);
     ReverseSublistSolution(tc2_head, 2, 5);
     PrintList(tc2_head);
     printf("\n");
 
-    /* Test case 3
+    /*
+     * Test case 3
      * 1 -> 2 -> 3
      */
     pListNode tc3_head      (new ListNode<int>(1));
@@ -173,7 +174,7 @@ int main()
     tc3_head->setNext(tc3_n1);
     tc3_n1->setNext(tc3_n2);
     PrintList(tc3_head);
-    //ReverseSublist(tc3_head, 2, 3);
+    // ReverseSublist(tc3_head, 2, 3);
     ReverseSublistSolution(tc3_head, 2, 3);
     PrintList(tc3_head);
 

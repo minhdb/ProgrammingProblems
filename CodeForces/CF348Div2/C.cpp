@@ -22,7 +22,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem:
+/*
+ * Problem:
  * Minh Bui
  */
 
@@ -41,7 +42,7 @@ void shift_col(int** chip, int c) {
 
     }
     chip[0][c] = tmp1;
-    //print_chip(chip);
+    // print_chip(chip);
 }
 
 void shift_row(int** chip, int r) {
@@ -52,7 +53,7 @@ void shift_row(int** chip, int r) {
         tmp1 = tmp2;
     }
     chip[r][0] = tmp1;
-    //print_chip(chip);
+    // print_chip(chip);
 }
 
 void print_chip(int** chip) {
@@ -91,7 +92,7 @@ int main() {
 
     for (int i = 0; i < q; i++) {
         string ini = ins.back();
-        //cout << "Ins: " << ini<< endl;
+        // cout << "Ins: " << ini<< endl;
         ins.pop_back();
         if (ini[0] == '1') {
             shift_row(chip, ini[1] - '0' - 1);
@@ -101,7 +102,7 @@ int main() {
         }
         else {
             chip[ini[1] - '0'- 1][ini[2] -'0' - 1] = ini[3] - '0';
-            //print_chip(chip);
+            // print_chip(chip);
         }
 
     }

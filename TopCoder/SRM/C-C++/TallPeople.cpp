@@ -18,7 +18,8 @@
 #include <ctime>
 #define FOR(x, y) for (int x = 0; x < y; x++)
 
-/* TopCoder SRM 208 Div 1 Level 1 - TallPeople
+/*
+ * TopCoder SRM 208 Div 1 Level 1 - TallPeople
  * Minh Bui
  */
 
@@ -68,4 +69,4 @@ int TallPeople::getEst(vector<int> people, bool tallest) {
 }
 
 <%:testing-code%>
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

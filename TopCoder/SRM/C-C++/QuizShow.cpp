@@ -19,9 +19,10 @@
 
 using namespace std;
 
-/* TopCoder SRM 223 DIV 1 - Level One.
+/*
+ * TopCoder SRM 223 DIV 1 - Level One.
  * Minh Bui
-*/
+ */
 
 class QuizShow {
 public:
@@ -45,4 +46,4 @@ int QuizShow::wager(vector <int> scores, int wager1, int wager2) {
 }
 
 <%:testing-code%>
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

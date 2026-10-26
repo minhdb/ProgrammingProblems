@@ -14,7 +14,6 @@
  *
  * Hint: How would you construct a random subset of size k + 1 given a random
  * subset of size k?
- *
  */
 
 #include <cstdio>
@@ -38,7 +37,7 @@ vector<int> get_k_subset(vector<int>& v, int k)
     while (k--) {
         std::uniform_int_distribution<int> dis(0, v.size()-1);
         int rand_idx = dis(generator);
-        //printf("rand_idx: %d\tv.size: %zu\n", rand_idx, v.size() - 1);
+        // printf("rand_idx: %d\tv.size: %zu\n", rand_idx, v.size() - 1);
         res.emplace_back(v[rand_idx]);
         v.erase(v.begin() + rand_idx);
     }
@@ -84,7 +83,7 @@ void print_vect(const vector<int>& v, size_t k)
 int main()
 {
     vector<int> tc{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
-    //print_vect(get_k_subset(tc, 7));
+    // print_vect(get_k_subset(tc, 7));
     get_k_subset_linear(tc, 18);
     print_vect(tc, 18);
     return 0;

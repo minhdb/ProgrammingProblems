@@ -9,7 +9,7 @@
  * Write a program which takes as input an array and finds the distance between
  * a closet pair of equal entries.
  *
- * For example, if 
+ * For example, if
  *
  * s = <"All", "work", "and", "no", "play", "makes", "for", "no", "work", "no",
  * "fun", "and", "no", "results">

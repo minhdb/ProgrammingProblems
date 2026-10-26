@@ -16,7 +16,7 @@
  * that are differ to 1.
  * Extract the last bit that's 1 from the result and count up.
  *
- * Time complexity: O(s) where s are the number of 
+ * Time complexity: O(s) where s are the number of
  * bit positions in which the bits differ.
  * Space complexity: O(1) since we need to allocate another
  *  32 or 64 bit field, depending on the architecture.

@@ -2,7 +2,7 @@
  * EPI Chapter 14 Sorting
  *
  * 07/30/2021
- * 
+ *
  * A natural implementation for a search engine is to retrieve documents that
  * match the set of words in a query by maintaining an inverted index. Each
  * page is assigned an integer identifier, its document-ID. An inverted index

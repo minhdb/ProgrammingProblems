@@ -174,8 +174,6 @@ pBSTNode RebuildBSTFromPreorderEPI(const vector<int>& preorder)
 
 /**
  * Variant: Rebuild BST from postorder traversal data using the same idea.
- *
- *
  */
 pBSTNode RebuildBSTFromPostorderOnValueRange(const vector<int>& postorder,
         int lower_bound, int upper_bound, int* root_idx_ptr)
@@ -239,14 +237,14 @@ int main()
     tc1_O->right_       = tc1_P;
 
     vector<int> tc1_preorder{19, 7, 3, 2, 5, 11, 17, 13, 43, 23, 37, 29, 31, 41, 47, 53};
-    //pBSTNode tc1_res = RebuildBSTFromPreorder(tc1_preorder);
+    // pBSTNode tc1_res = RebuildBSTFromPreorder(tc1_preorder);
     pBSTNode tc1_res = RebuildBSTFromPreorderEPI(tc1_preorder);
 
     PrintVect(tc1_preorder);
     vector<int> tc1_res_preorder;
     Preorder(tc1_res, tc1_res_preorder);
     PrintVect(tc1_res_preorder);
-    //assert(Equals(tc1_A, tc1_res));
+    // assert(Equals(tc1_A, tc1_res));
 
     vector<int> tc1_postorder{2, 5, 3, 13, 17, 11, 7, 3, 31, 29, 41, 37, 23, 53, 47, 43, 19};
     pBSTNode tc1_res_post = RebuildBSTFromPostorder(tc1_postorder);
@@ -255,7 +253,7 @@ int main()
     vector<int> tc1_res_post_vect;
     Postorder(tc1_res_post, tc1_res_post_vect);
     PrintVect(tc1_res_post_vect);
-    //assert(Equals(tc1_A, tc1_res_post));
+    // assert(Equals(tc1_A, tc1_res_post));
 
 
     return 0;

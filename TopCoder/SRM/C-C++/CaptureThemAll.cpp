@@ -22,7 +22,8 @@
 using namespace std;
 
 
-/* TopCoder SRM 207 Dev II Level 3
+/*
+ * TopCoder SRM 207 Dev II Level 3
  * Minh Bui
  */
 
@@ -113,10 +114,10 @@ vector<int*> CaptureThemAll::generatePossibleStates(int* start) {
         }
     }
     
-    //cout << "Possible state of " << start[0] << ", " << start[1] << endl;
-    //for (int i = 0; i < states.size(); i++) {
+    // cout << "Possible state of " << start[0] << ", " << start[1] << endl;
+    // for (int i = 0; i < states.size(); i++) {
     //    cout << states[i][0] << " " << states[i][1] << endl;
-    //}
+    // }
     return states;
 }
 

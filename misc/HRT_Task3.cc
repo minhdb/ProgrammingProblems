@@ -28,7 +28,7 @@
  *
  * 1. Given K = 2 and A = [[0,0,0,0],[0,0,1,0],[1,0,0,1]], the function should
  * return 2, as explained above.
- * 
+ *
  * 2. Given K = 1 and A = [[0,1], [0,0]], the function should return 2. We can
  * build a store on empty plots at (1, 1) and (2, 2).
  *

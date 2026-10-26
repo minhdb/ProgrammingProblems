@@ -19,7 +19,8 @@
 
 using namespace std;
 
-/* TopCoder SRM236 Div 1 Level 1.
+/*
+ * TopCoder SRM236 Div 1 Level 1.
  * Minh Bui
  */
 

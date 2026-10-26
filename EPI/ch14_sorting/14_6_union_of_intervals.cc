@@ -83,7 +83,7 @@ vector<Interval> UnionOfIntervals(vector<Interval> intervals)
     //
     //
 
-    //PrintIntervals(intervals);
+    // PrintIntervals(intervals);
     
     for (auto interval : intervals) {
         if (res.empty() || res.back().end.val < interval.start.val) {
@@ -109,7 +109,7 @@ vector<Interval> UnionOfIntervals(vector<Interval> intervals)
             }
         }
 
-        //PrintIntervals(res);
+        // PrintIntervals(res);
     }
 
     return res;

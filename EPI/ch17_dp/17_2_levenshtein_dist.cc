@@ -61,7 +61,7 @@ void PrintMatrix(const vector<vector<int>>& m)
  * 1. Transforming A[0..a-2] to B[0..b-2] and replace the last character of A
  * with the last character of B.
  * 2. Transforming A[0..a-1] to B[0..b-2] and add the last character of B to A.
- * 3. Transforming A[0..a-2] to B[0..b-1] and delete the last character of A. 
+ * 3. Transforming A[0..a-2] to B[0..b-1] and delete the last character of A.
  *
  * Our recurrence relation is:
  *
@@ -98,8 +98,8 @@ int LevenshteinDistance(const string& str1, const string& str2)
             }
         }
     }
-    //printf("%d\n", L[str2.size()][str1.size()]);
-    //PrintMatrix(L);
+    // printf("%d\n", L[str2.size()][str1.size()]);
+    // PrintMatrix(L);
     return L[str2.size()][str1.size()];
 }
 

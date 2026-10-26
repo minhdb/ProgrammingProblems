@@ -17,7 +17,8 @@
 #include <cstdlib>
 #include <ctime>
 
-/* TopCoder SRM 678 Round 1 Division II - Level 1
+/*
+ * TopCoder SRM 678 Round 1 Division II - Level 1
  * Minh Bui
  */
 
@@ -42,4 +43,4 @@ int ThePhantomMenace::find(vector <int> doors, vector <int> droids) {
 }
 
 
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

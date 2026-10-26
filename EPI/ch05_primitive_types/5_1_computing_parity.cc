@@ -12,7 +12,7 @@
  * How would you compute the parity of a very large number of 64-bit words?
  *
  * Hint: Use a lookup table. Don't use 2^64 entries.
- * */
+ */
 
 #include <cassert>
 #include <cstdio>
@@ -97,10 +97,10 @@ short computing_parity_xor_shift(long n)
 
 int main()
 {
-    //printf("Size of integer: %zu\n", sizeof(int));
-    //printf("Size of unsigned integer: %zu\n", sizeof(unsigned int));
-    //printf("Size of long integer: %zu\n", sizeof(long));
-    //printf("Size of unsigned long: %zu\n", sizeof(unsigned long));
+    // printf("Size of integer: %zu\n", sizeof(int));
+    // printf("Size of unsigned integer: %zu\n", sizeof(unsigned int));
+    // printf("Size of long integer: %zu\n", sizeof(long));
+    // printf("Size of unsigned long: %zu\n", sizeof(unsigned long));
     //
     assert(computing_parity_brute_force(0b1011) == 1);
     assert(computing_parity_brute_force(0b10001000) == 0);

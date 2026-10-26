@@ -22,7 +22,8 @@
 #define gc getchar_unlocked
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: Codeforce 282A
+/*
+ * Problem: Codeforce 282A
  * Minh Bui
  */
 

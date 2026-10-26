@@ -19,7 +19,8 @@
 #include <cstring>
 #define FOR(x, y) for (int x = 0; x < y; x++)
 
-/* TopCoder SRM 209 Div 1 Level 1 - MedalTable
+/*
+ * TopCoder SRM 209 Div 1 Level 1 - MedalTable
  * Minh Bui
  */
  

@@ -10,13 +10,11 @@
  *
  *
  * There are 2 solutions:
- * O(nm) / O(1) - We traverse the stones string character by character and 
+ * O(nm) / O(1) - We traverse the stones string character by character and
  *  check if such character is found in the jewels string.
  *
  * O(m) / O(n) - Use a hash table to store each unique character in jewels.
  *  Traverse the stones string and check if it's in the hash table.
- *
- *
  */
 
 #include <string>

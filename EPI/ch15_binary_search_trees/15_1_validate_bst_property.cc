@@ -3,7 +3,7 @@
  *
  * 07/31/2021
  *
- * Write a program that takes as input a binary tree and checks if the tree 
+ * Write a program that takes as input a binary tree and checks if the tree
  * satisfies the BST property.
  *
  * Hint: Is it correct to check for each node that its key is greater than or

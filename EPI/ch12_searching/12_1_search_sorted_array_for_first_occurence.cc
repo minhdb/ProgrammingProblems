@@ -42,13 +42,13 @@ int FirstOccurence(const vector<int>& arr, int k)
         }
     }
 
-    //printf("Found %d at %d\n", k, first_occurence);
+    // printf("Found %d at %d\n", k, first_occurence);
     if (first_occurence > 0) {
         while (first_occurence >= 0 && arr[first_occurence] == k)
             first_occurence--;
         first_occurence++;
     }
-    //printf("%d\n", first_occurence);
+    // printf("%d\n", first_occurence);
     return first_occurence;
 }
 

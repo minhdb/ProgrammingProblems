@@ -4,7 +4,8 @@
 #include <cmath>
 #define gc getchar_unlocked
 
-/* UVA 10141 - Request for Proposal.
+/*
+ * UVA 10141 - Request for Proposal.
  * Minh Bui
  */
 

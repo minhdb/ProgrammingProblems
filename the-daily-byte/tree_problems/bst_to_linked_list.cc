@@ -57,7 +57,7 @@ void inorder_traversal(pBSTNode& root)
 pBSTNode bst_to_linked_list(pBSTNode& root)
 {
     pBSTNode ll = bst_to_linked_list_aux(root);
-    //inorder_traversal(ll);
+    // inorder_traversal(ll);
     print_right_tree(ll);
     return ll;
 }

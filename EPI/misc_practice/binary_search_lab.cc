@@ -14,7 +14,7 @@ using std::upper_bound;
 
 /**
  * upper_bound returns an iterator to an element that's greater than the target.
- * lower_bound returns an iterator to an element that's greater than or 
+ * lower_bound returns an iterator to an element that's greater than or
  * equal the target.
  */
 int main()

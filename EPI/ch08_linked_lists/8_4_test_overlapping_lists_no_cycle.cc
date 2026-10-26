@@ -43,7 +43,7 @@ using pListNode = shared_ptr<ListNode<int>>;
  * acquired by traversing the list until 2 pointers are the same.
  *
  * If the length of 2 list are different: The common node to both list can
- * be acquired by first traversing the longer list by 
+ * be acquired by first traversing the longer list by
  * (larger_len - smaller_len) nodes. And then traverse both lists together.
  *
  *

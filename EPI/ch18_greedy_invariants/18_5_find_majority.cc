@@ -65,7 +65,7 @@ string MajoritySearchHT(istringstream& input_stream)
  * those that don't.
  *
  * If we consider 2 consecutive elements in the stream, if they are different,
- * then there can be at most 1 out of 2 elements that might be a majority 
+ * then there can be at most 1 out of 2 elements that might be a majority
  * element.
  *
  * We know m / n > 1 / 2, if the next element is not a majority element,

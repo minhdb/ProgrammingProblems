@@ -110,7 +110,7 @@ int main()
     // I and J. Should return B.
     assert(GetLCA(tc1_root->left_->left_->left_->left_,
                 tc1_root->left_->right_->right_) == tc1_root->left_);
-    //GetLCA(tc1_root->left_->left_->left_->left_, tc1_root->left_->right_->right_);
+    // GetLCA(tc1_root->left_->left_->left_->left_, tc1_root->left_->right_->right_);
 
     return 0;
 }

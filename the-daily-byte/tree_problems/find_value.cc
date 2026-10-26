@@ -17,11 +17,11 @@ using std::make_unique;
 using std::shared_ptr;
 using data_structures::BSTNode;
 using std::move;
-//using pBSTNode = shared_ptr<BSTNode<int>>;
+// using pBSTNode = shared_ptr<BSTNode<int>>;
 
 /**
  * Find value in BST.
- * Time complexity: O(2^(h - 1)) 
+ * Time complexity: O(2^(h - 1))
  * Space complexity: O(h) - where h is the height of the tree.
  */
 shared_ptr<BSTNode<int>> find_value(shared_ptr<BSTNode<int>>& root, int value)

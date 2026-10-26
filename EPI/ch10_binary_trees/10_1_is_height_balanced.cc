@@ -14,7 +14,7 @@
  */
 
 /*
- * Idea: We can traverse the tree, keeping the height for each subtree. 
+ * Idea: We can traverse the tree, keeping the height for each subtree.
  * If the difference in height of either left or right subtree is more than
  * 1, return false.
  */

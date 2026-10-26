@@ -13,7 +13,7 @@
  *
  * Given a dictionary D and 2 strings s and t, write a program to determine if
  * s produces t. Assume that all characters are lowercase alphabets. If s does
- * produce t, output the length of a shortest production sequence; otherwise, 
+ * produce t, output the length of a shortest production sequence; otherwise,
  * output -1.
  *
  * Hint: Treat strings as vertices in an undirected graph, with an edge between

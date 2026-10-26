@@ -9,3 +9,4 @@
  * in the same currency, and currency exchange is not supported for now.
  *
  * The platform shoud lsupport the following 3t ypes of operations
+ */

@@ -6,7 +6,7 @@
  * Write a program which takes as input a set of integers represented by an
  * array, and returns the size of a largest subset of integers in the array
  * having the property that if 2 integers are in the subset, then so are all
- * integers between them. For example, if the input is 
+ * integers between them. For example, if the input is
  *
  * <3, -2, 7, 9, 8, 1, 2, 0, -1, 5, 8>
  *
@@ -120,13 +120,13 @@ int main()
 {
     vector<int> tc1{3, -2, 7, 9, 8, 1, 2, 0, -1, 5, 8};
     int tc1_res = 6;
-    //assert(LongestContainedRangeSort(tc1) == tc1_res);
+    // assert(LongestContainedRangeSort(tc1) == tc1_res);
     assert(LongestContainedRange(tc1) == tc1_res);
     assert(LongestContainedRangeEPI(tc1) == tc1_res);
 
     vector<int> tc2{10, 5, 3, 11, 6, 100, 4};
     int tc2_res = 4;
-    //assert(LongestContainedRangeSort(tc2) == tc2_res);
+    // assert(LongestContainedRangeSort(tc2) == tc2_res);
     assert(LongestContainedRange(tc2) == tc2_res);
     assert(LongestContainedRangeEPI(tc2) == tc2_res);
 

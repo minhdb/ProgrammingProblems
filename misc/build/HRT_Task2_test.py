@@ -1,6 +1,4 @@
-'''
-    Generate test cases for HRT_Task2
-'''
+"""Generate test cases for HRT_Task2"""
 
 
 def get_test_cases():

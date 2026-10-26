@@ -10,7 +10,7 @@
  * can be viewed as a BST where all keys are equal. However, when the keys
  * are distinct, it is possible to improve on the LCA algorithms for binary
  * trees.
- * 
+ *
  * Design an algorithm that takes as input a BST and 2 nodes, and returns
  * the LCA of the 2 nodes.
  * Assume all keys are distinct. Nodes do not have references to their parents.

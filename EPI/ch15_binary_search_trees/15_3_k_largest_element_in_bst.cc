@@ -2,7 +2,7 @@
  * EPI Chapter 15 Binary Search Trees
  *
  * 15.3 Find the k largest elements in a BST
- * A BST is a sorted data structure, which suggests that it should be possible 
+ * A BST is a sorted data structure, which suggests that it should be possible
  * to find the k largest keys easily.
  *
  * Write a program that takes as input a BST and an integer k, and returns the

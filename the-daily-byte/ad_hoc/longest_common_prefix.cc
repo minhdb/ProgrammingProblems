@@ -4,7 +4,6 @@
  * Given an array of strings, return the longest common prefix that is shared
  * amongst all strings. You may assume all strings only contain lowercase
  * alphabetical characters.
- *
  */
 
 #include <string>

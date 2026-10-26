@@ -1,8 +1,6 @@
 class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
-        """
-        Note that x, y are unsigned.
-        """
+        """Note that x, y are unsigned."""
 
         if x > y:
             larger = x

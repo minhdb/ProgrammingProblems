@@ -175,7 +175,7 @@ int main()
     pListNode tc1_res = EvenOddMergeBF(tc1_head);
     PrintLinkedList(tc1_res);
 
-    //printf("Singly storage solution:\n");
+    // printf("Singly storage solution:\n");
     printf("EPI solution:\n");
     PrintLinkedList(tc1_head);
     EvenOddMergeEPI(tc1_head);
@@ -189,7 +189,7 @@ int main()
     pListNode tc2_res = EvenOddMergeBF(tc2_head);
     PrintLinkedList(tc2_res);
 
-    //printf("Singly storage solution:\n");
+    // printf("Singly storage solution:\n");
     printf("EPI solution:\n");
     PrintLinkedList(tc2_head);
     EvenOddMergeEPI(tc2_head);
@@ -205,7 +205,7 @@ int main()
     pListNode tc3_res = EvenOddMergeBF(tc3_head);
     PrintLinkedList(tc3_res);
 
-    //printf("Singly storage solution:\n");
+    // printf("Singly storage solution:\n");
     printf("EPI solution:\n");
     PrintLinkedList(tc3_head);
     EvenOddMergeEPI(tc3_head);
@@ -223,7 +223,7 @@ int main()
     pListNode tc4_res = EvenOddMergeBF(tc4_head);
     PrintLinkedList(tc4_res);
 
-    //printf("Singly storage solution:\n");
+    // printf("Singly storage solution:\n");
     printf("EPI solution:\n");
     PrintLinkedList(tc4_head);
     EvenOddMergeEPI(tc4_head);
@@ -250,7 +250,7 @@ int main()
     pListNode tc5_res = EvenOddMergeBF(tc5_head);
     PrintLinkedList(tc5_res);
 
-    //printf("Singly storage solution:\n");
+    // printf("Singly storage solution:\n");
     printf("EPI solution:\n");
     PrintLinkedList(tc5_head);
     EvenOddMergeEPI(tc5_head);

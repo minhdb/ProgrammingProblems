@@ -58,7 +58,7 @@ int max_profit_brute_force(const vector<int> & v, vector<int>& res)
             }
         }
     }
-    //printf("Max profit: %d\tBuy at: %d\tSell at: %d\n", max_profit, v[res[0]], v[res[1]]);
+    // printf("Max profit: %d\tBuy at: %d\tSell at: %d\n", max_profit, v[res[0]], v[res[1]]);
     return max_profit;
 }
 

@@ -2,7 +2,7 @@
  * EPI Chapter 5 - Primitive types
  *
  * 5.4 Find a closest integer with the same weight.
- * 
+ *
  * Define the weight of a nonnegative integer x to be the number of bits that
  * are set to 1 in its binary representation. For example, since 92 in base 2
  * is 1011100, the weight of 92 is 4.
@@ -24,7 +24,7 @@
  * After that, we try to generate all number such that it has weight w and find
  * the number y such that |y - x| is smallest.
  *
- * This will take O( C(w, n) ). 
+ * This will take O( C(w, n) ).
  *
  * Complicated to code the complete solution. We need a different approach.
  */
@@ -38,7 +38,6 @@
  * Time complexity: O(n) where n is the number of bits.
  *
  * NOT CORRECT.
- *
  */
 int ClosestIntSameWeight(int x)
 {

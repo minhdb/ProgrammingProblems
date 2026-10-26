@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <cmath>
 
-/* UVA 573 - The Snail
+/*
+ * UVA 573 - The Snail
  * Minh Bui
  */
 

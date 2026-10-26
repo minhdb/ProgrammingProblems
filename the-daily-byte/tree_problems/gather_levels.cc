@@ -3,7 +3,6 @@
  *
  * Given a binary tree, return its level order traversal where the nodes in
  * each level are ordered from left to right.
- *
  */
 
 #include "../data_structures/bst_node.h"

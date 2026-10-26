@@ -34,7 +34,7 @@ using std::max;
  * Brute force solution: For every possible nondecreasing subsequence, keep
  * track of the maximum length. The time complexity will be O(n2^n)
  *
- * Idea for dynamic programming: 
+ * Idea for dynamic programming:
  *
  * Time complexity: O(n^2)
  * Space complexity: O(n)

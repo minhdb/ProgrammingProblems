@@ -42,7 +42,6 @@ void print_vect(const vector<pBSTNode>& v)
 
 /**
  * Time complexity: O(logn)
- *
  */
 pBSTNode LCA( pBSTNode& root, int a, int b )
 {
@@ -52,8 +51,8 @@ pBSTNode LCA( pBSTNode& root, int a, int b )
     get_ancestors(root, a, a_ancestors);
     get_ancestors(root, b, b_ancestors);
 
-    //print_vect(a_ancestors);
-    //print_vect(b_ancestors);
+    // print_vect(a_ancestors);
+    // print_vect(b_ancestors);
 
     int a_ans_len = a_ancestors.size();
     int b_ans_len = b_ancestors.size();

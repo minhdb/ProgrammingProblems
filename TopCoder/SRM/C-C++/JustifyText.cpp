@@ -17,7 +17,8 @@
 #include <cstdlib>
 #include <ctime>
 
-/* TopCoder SRM 233 Div II - Level 1.
+/*
+ * TopCoder SRM 233 Div II - Level 1.
  * Minh Bui
  */
 
@@ -46,4 +47,4 @@ vector <string> JustifyText::format(vector <string> text) {
 }
 
 <%:testing-code%>
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

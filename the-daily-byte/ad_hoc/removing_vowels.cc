@@ -3,7 +3,6 @@
  *
  * Given a string s, remove all the vowels it contains and return the resulting
  * string.
- *
  */
 
 #include <string>

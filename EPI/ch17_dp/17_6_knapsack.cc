@@ -26,7 +26,7 @@ using std::max;
  * Idea: Consider each item at index ith, we have 2 choice: take that item or
  * don't. Thus, the solution is
  *
- * Sol(N, Items[0..i]) = Max(Sol(N - W[i]), Items[0..i-1] + V[i], 
+ * Sol(N, Items[0..i]) = Max(Sol(N - W[i]), Items[0..i-1] + V[i],
  *                          Sol(N, Items[0..i-1]))
  * If W[i] > N, then Sol(N, Items[0..i]) = Sol(N, Items[0..i-1])
  *

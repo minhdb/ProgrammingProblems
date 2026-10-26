@@ -57,7 +57,7 @@ void print_vect(const vector<string>& v)
  * Let n be the length of the string s.
  *
  * Time complexity: O(n4^n)
- * Space complexity: O(4^n) since each digit has either 0, 3, or 4 choices. 
+ * Space complexity: O(4^n) since each digit has either 0, 3, or 4 choices.
  */
 vector<string> phone_mnemonic_aux(string s)
 {

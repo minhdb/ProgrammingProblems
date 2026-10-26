@@ -20,7 +20,8 @@
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 #define PI 3.141592653589793
 
-/* TopCoder - Single Round Match 271 Round 1 - Division II, Level Two 
+/*
+ * TopCoder - Single Round Match 271 Round 1 - Division II, Level Two
  * Minh Bui
  */
 

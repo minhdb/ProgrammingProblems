@@ -22,7 +22,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: SRM 688 Division 2 level 2.
+/*
+ * Problem: SRM 688 Division 2 level 2.
  * Minh Bui
  */
 

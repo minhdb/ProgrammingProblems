@@ -80,10 +80,10 @@ int Eval(const string& rpn_expression)
             s.pop();
             int first_op = s.top();
             s.pop();
-            //printf("%d / %d = %d\n", first_op, second_op, first_op/second_op);
+            // printf("%d / %d = %d\n", first_op, second_op, first_op/second_op);
             s.emplace(first_op / second_op);
         } else {
-            //printf("%d\n",std::stoi(token));
+            // printf("%d\n",std::stoi(token));
             s.emplace(std::stoi(token));
         }
     }
@@ -91,16 +91,17 @@ int Eval(const string& rpn_expression)
 }
 
 
- /* (1.) It is a single digit or a sequence of digits, prefixed with an option -
- * e.g., "6", "123", "-42"
- * (2.) It is a form "A, B, o" where A and B are RPN expressions and o is one
- * of +, -, x, /
- *
- * For example, the followign strings satisfy these rules: "1729",
- * "3,4,+,2,x,1,+",
- * "1,1,+,-2,x",
- * "-641,6,/,28,/"
- */
+ /*
+  * (1.) It is a single digit or a sequence of digits, prefixed with an option -
+  * e.g., "6", "123", "-42"
+  * (2.) It is a form "A, B, o" where A and B are RPN expressions and o is one
+  * of +, -, x, /
+  *
+  * For example, the followign strings satisfy these rules: "1729",
+  * "3,4,+,2,x,1,+",
+  * "1,1,+,-2,x",
+  * "-641,6,/,28,/"
+  */
 
 int main()
 { 

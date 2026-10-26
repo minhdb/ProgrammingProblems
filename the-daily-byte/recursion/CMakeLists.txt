@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-#add_library(SINGLY_LINKED_LIST ../data_structures/singly_linked_node.h ../data_structures/singly_linked_node.cc)
+# add_library(SINGLY_LINKED_LIST ../data_structures/singly_linked_node.h ../data_structures/singly_linked_node.cc)
 
 add_executable(string_permutation string_permutation.cc)
 add_executable(generate_text_message generate_text_message.cc)

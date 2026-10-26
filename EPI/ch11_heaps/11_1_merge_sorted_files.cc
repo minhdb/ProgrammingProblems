@@ -32,7 +32,8 @@
 using std::vector;
 using std::priority_queue;
 
-/** BF solution: Put all elements from all sequence into an array and sort it.
+/**
+ * BF solution: Put all elements from all sequence into an array and sort it.
  *
  * Time complexity: O(nlogn) where n is the number of elements.
  * Space complexity: O(1)
@@ -40,7 +41,7 @@ using std::priority_queue;
 
 /**
  * Heap solution: Use the fact that each given sequence is sorted.
- * 
+ *
  * Time complexity: O(nlogk)
  * Space complexity: O(k)
  */

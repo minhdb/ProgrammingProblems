@@ -202,7 +202,6 @@ private:
 };
 
 /**
- *
  */
 template<class T>
 class MaxStackEPIOpt

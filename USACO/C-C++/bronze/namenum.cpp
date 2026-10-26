@@ -29,46 +29,48 @@ LANG: C++11
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: USACO namenum
+/*
+ * Problem: USACO namenum
  * Minh Bui
  */
 
 using namespace std;
 
-/* Bruteforce solution-out of memory
-char* arr[10];
-stack<string> s;
-
-vector<string> findNames(vector<string> &words, string &num) {
-    int n = num.size();
-    //stack<string> s;
-    vector<string> availNames;
-    map <string, bool> visited;
-    string na = "";
-    for (int i = 0; i < 3; i++) {
-        s.push(na + arr[num[0] - '0'][i]);
-    }
-    while (!s.empty()) {
-        string cur = s.top();
-        s.pop();
-        if (cur.size() == n) {
-            if (binary_search(words.begin(), words.end(), cur))
-                availNames.push_back(cur);
-        } else {
-            //cout << cur << endl;
-            string push_s = cur;
-            for (int j = 0; j < 3; j++) {
-                push_s = cur + arr[num[cur.size()] - '0'][j];
-                if (!visited[push_s]) {
-                    visited[push_s] = true;
-                    s.push(push_s);
-                }
-            }
-        }
-    }
-    return availNames;
-}
-*/
+/*
+ * Bruteforce solution-out of memory
+ * char* arr[10];
+ * stack<string> s;
+ *
+ * vector<string> findNames(vector<string> &words, string &num) {
+ *     int n = num.size();
+ *     //stack<string> s;
+ *     vector<string> availNames;
+ *     map <string, bool> visited;
+ *     string na = "";
+ *     for (int i = 0; i < 3; i++) {
+ *         s.push(na + arr[num[0] - '0'][i]);
+ *     }
+ *     while (!s.empty()) {
+ *         string cur = s.top();
+ *         s.pop();
+ *         if (cur.size() == n) {
+ *             if (binary_search(words.begin(), words.end(), cur))
+ *                 availNames.push_back(cur);
+ *         } else {
+ *             //cout << cur << endl;
+ *             string push_s = cur;
+ *             for (int j = 0; j < 3; j++) {
+ *                 push_s = cur + arr[num[cur.size()] - '0'][j];
+ *                 if (!visited[push_s]) {
+ *                     visited[push_s] = true;
+ *                     s.push(push_s);
+ *                 }
+ *             }
+ *         }
+ *     }
+ *     return availNames;
+ * }
+ */
 
 int arr[26];
 
@@ -87,25 +89,25 @@ int main() {
     /*
      * Brute-force solution.
      * Out of memory.
-    char c = 'A';
-    for (int i = 2; i < 10; i++) {
-        arr[i] = new char[3];
-        for (int j = 0; j < 3; j++) {
-            if (c == 'Q') c++;
-            arr[i][j] = c;
-            c++;
-        }
-    }
-    int n = num.size();
-
-    vector<string> names = findNames(words, num);
-    if (names.size()) {
-        sort(names.begin(), names.end());
-        for (int i = 0; i < names.size(); i++)
-            fout << names[i] << endl;
-    } else
-        fout << "NONE" << endl;
-    */
+     * char c = 'A';
+     * for (int i = 2; i < 10; i++) {
+     *     arr[i] = new char[3];
+     *     for (int j = 0; j < 3; j++) {
+     *         if (c == 'Q') c++;
+     *         arr[i][j] = c;
+     *         c++;
+     *     }
+     * }
+     * int n = num.size();
+     *
+     * vector<string> names = findNames(words, num);
+     * if (names.size()) {
+     *     sort(names.begin(), names.end());
+     *     for (int i = 0; i < names.size(); i++)
+     *         fout << names[i] << endl;
+     * } else
+     *     fout << "NONE" << endl;
+     */
     int change = 0;
     int init = 2;
     for (int i = 0; i < 26; i++) {

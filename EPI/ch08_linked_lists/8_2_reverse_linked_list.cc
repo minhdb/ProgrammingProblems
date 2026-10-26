@@ -85,10 +85,10 @@ void ReverseLinkedListIterative(pListNode& head)
 int main()
 {
     /*
-    * 11 -> 3 -> 5 -> 7 -> 2
-    *
-    * 11 -> 7 -> 5 -> 3 -> 2
-    */
+     * 11 -> 3 -> 5 -> 7 -> 2
+     *
+     * 11 -> 7 -> 5 -> 3 -> 2
+     */
     pListNode tc1_head      (new ListNode<int>(11));
     pListNode tc1_n1        (new ListNode<int>(3));
     pListNode tc1_n2        (new ListNode<int>(5));

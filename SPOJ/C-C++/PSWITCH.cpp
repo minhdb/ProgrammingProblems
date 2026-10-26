@@ -23,7 +23,8 @@
 #define vii vector< vector <int> >
 #define FOR(x, size) for(int x = 0; x < size; ++x)
 
-/* Problem: SPOJ PSWITCH - IOI 1998
+/*
+ * Problem: SPOJ PSWITCH - IOI 1998
  * Minh Bui
  */
 
@@ -103,7 +104,7 @@ int main() {
     string prev = "";
     for (int i = 0; i < possible.size(); i++) {
         if (possible[i] != prev && check(possible[i], on, off)) {
-        //if (possible[i] != prev) {
+        // if (possible[i] != prev) {
             cout << possible[i] << endl;
             count++;
         }

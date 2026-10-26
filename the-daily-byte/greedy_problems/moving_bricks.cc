@@ -1,5 +1,5 @@
 /**
- * The Daily Byte 
+ * The Daily Byte
  *
  * 07/21/2021
  *
@@ -10,7 +10,7 @@
  * to transport.
  *
  *
- * LeetCode equivalent: LC1196 
+ * LeetCode equivalent: LC1196
  */
 
 #include <vector>
@@ -23,7 +23,7 @@ using std::vector;
  * First solution that comes to my mind is that we can sort the bricks from
  * lightest to heaviest, and we always want to pick the lightest bricks.
  *
- * Is it correct? 
+ * Is it correct?
  *
  * The time complexity: O(nlogn) due to sorting.
  */

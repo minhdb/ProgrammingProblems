@@ -20,9 +20,9 @@
 using namespace std;
 
 /**
-  * Problem: TopCoder SRM 687 Div2
-  * Minh Bui
-  */
+ * Problem: TopCoder SRM 687 Div2
+ * Minh Bui
+ */
 
 class Quorum {
 public:
@@ -37,4 +37,4 @@ int Quorum::count(vector <int> arr, int k) {
 }
 
 
-//Powered by [KawigiEdit] 2.0!
+// Powered by [KawigiEdit] 2.0!

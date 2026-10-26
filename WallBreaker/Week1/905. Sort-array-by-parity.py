@@ -1,8 +1,8 @@
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
-        """
-            Time: O(n)
-            Space: O(n) due to having 2 lists
+        """Time: O(n)
+
+        Space: O(n) due to having 2 lists
         """
         
         evenList = []

@@ -41,7 +41,7 @@ vector<int> greater_elements(const vector<int>& v1, const vector<int>& v2)
         
         if (!found) res.push_back(-1);
     }
-    //print_vector(res);
+    // print_vector(res);
     return res;
 }
 

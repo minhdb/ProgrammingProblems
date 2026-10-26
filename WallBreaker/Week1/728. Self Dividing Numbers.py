@@ -1,7 +1,6 @@
 class Solution:
     def selfDividingNumbers(self, left: int, right: int) -> List[int]:
-        """ Brute force solution
-        """
+        """Brute force solution"""
         solList = []
         for i in range(left, right+1):
             if (self.isSelfDividingNumber(i)):
