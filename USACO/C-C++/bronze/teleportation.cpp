@@ -1,6 +1,6 @@
-#include <iostream>
 #include <fstream>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
 
 int main()

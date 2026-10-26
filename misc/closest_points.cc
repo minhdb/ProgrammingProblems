@@ -139,7 +139,6 @@ float ClosestPoints(std::vector<Point>& points, std::vector<Point>& result)
     return min_dist;
 }
 
-
 int main()
 {
     float x, y;
@@ -157,7 +156,6 @@ int main()
     ClosestPointsBF(points, 0, points.size(), dbf, closestPointsBF_result);
     ddaq = ClosestPoints(points, closestPointsDiv_result);
 
-    
     assert((closestPointsBF_result == closestPointsDiv_result) || [&]() {
         std::reverse(std::begin(closestPointsBF_result), std::end(closestPointsBF_result));
         return closestPointsBF_result == closestPointsDiv_result;
