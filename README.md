@@ -38,15 +38,31 @@ Paste the statement inside a closed opening C/C++ comment (`/* ... */`,
 (`"""..."""` or triple single quotes). Then run this from the repository root:
 
 ```sh
-python3 tools/format_statement.py --write USACO/C-C++/bronze/mixing_milk.cpp
-python3 tools/format_statement.py --write USACO/Python/bronze/shell_game.py
+tools/format-statement USACO/C-C++/bronze/mixing_milk.cpp
+tools/format-statement USACO/Python/bronze/shell_game.py
 ```
 
-Omit `--write` to preview a diff. Use `--width 100` to change the default
-79-character width, or `--check` to report files that need formatting without
-editing them. Multiple filenames are accepted. The script uses only the Python
-standard library and changes the leading statement; code and later comments
-remain byte-for-byte intact. It skips USACO `ID`/`LANG` submission headers.
+Save the file before running the shell command. The wrapper updates files by
+default. Put `--preview` first to preview a diff, or `--check` first to report
+files that need formatting without editing them. Use `--width 100` to change
+the default 79-character width. Multiple filenames are accepted; quote paths
+that contain spaces. The wrapper finds its companion Python script relative
+to itself, and interprets input paths relative to your current directory.
+
+For a short command from any directory, add this alias to your shell config
+(using the path to your checkout), or run it in your current shell:
+
+```sh
+alias format-statement='/home/minhdb/workspaces/ProgrammingProblems/tools/format-statement'
+format-statement mixing_milk.cpp
+format-statement --preview shell_game.py
+```
+
+The underlying command, `python3 tools/format_statement.py --write FILE`, also
+remains available. The formatter uses only the Python standard library and
+changes the leading statement; code and later comments remain byte-for-byte
+intact. It skips USACO `ID`/`LANG` submission headers. After formatting a saved
+file from the shell, use `:e` in Vim/Neovim to reload it.
 
 The formatter recognizes headings such as `INPUT FORMAT`, `SAMPLE INPUT`,
 `SAMPLE OUTPUT`, and `Explanation`. It wraps prose and joins broken lines from
@@ -57,8 +73,21 @@ blocks within the comment. Sample lines, tables, URLs, and long unbroken words
 may exceed the requested width. This is a text formatter, so it cannot reconstruct
 math symbols or layout that the browser did not copy.
 
-For Vim/Neovim, this command formats the current buffer, including unsaved
-changes (use the path to your checkout):
+On this machine, **F4** formats the opening problem statement in C/C++ and
+Python buffers in both Vim and Neovim, including unsaved edits. It works from
+any directory and uses the buffer's filetype, so unnamed buffers work after
+`:setfiletype cpp` or `:setfiletype python`. Use `u` to undo or `:w` to save;
+F5 continues to save and compile C++. `:StatementFormat` runs the same action.
+
+The shared mapping lives in `~/.vim/after/plugin/statement-format.vim` and uses
+Python 3 plus `~/.local/share/format-statement/format_statement.py`. The installed
+formatter is a copy of this repository's script, so moving this checkout does
+not break F4. Future script updates need to be copied to that installed path.
+Restart the editor or run `:source ~/.vim/after/plugin/statement-format.vim`
+to enable the new mapping in an existing session.
+
+Without the installed mapping, this command formats the current buffer,
+including unsaved changes (use the path to your checkout):
 
 ```vim
 :execute '%!python3 /home/minhdb/workspaces/ProgrammingProblems/tools/format_statement.py --stdin-filename ' . shellescape(expand('%:p'))

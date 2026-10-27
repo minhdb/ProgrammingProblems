@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# Format the opening problem statement in saved C/C++ or Python files.
+set -euo pipefail
+
+case "${1:-}" in
+    -h|--help)
+        cat <<'USAGE'
+Usage: format-statement [--preview | --check] [--width N] FILE...
+
+Format the opening C/C++ comment or Python docstring in saved files.
+Files are updated by default. Relative paths use your current directory.
+
+  --preview  Show a diff without editing files.
+  --check    Exit 1 if formatting is needed, without editing files.
+  --width N  Set the line width (default: 79).
+
+Examples:
+  tools/format-statement solution.cpp
+  tools/format-statement solution.py "another solution.cpp"
+  tools/format-statement --preview solution.cpp
+USAGE
+        exit 0
+        ;;
+esac
+
+statement_mode=(--write)
+case "${1:-}" in
+    --preview)
+        statement_mode=()
+        shift
+        ;;
+    --check)
+        statement_mode=(--check)
+        shift
+        ;;
+esac
+
+statement_tool_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" >/dev/null && pwd -P)"
+exec python3 "$statement_tool_dir/format_statement.py" "${statement_mode[@]}" "$@"
