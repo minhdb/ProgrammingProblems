@@ -12,7 +12,7 @@ Files are updated by default. Relative paths use your current directory.
 
   --preview  Show a diff without editing files.
   --check    Exit 1 if formatting is needed, without editing files.
-  --width N  Set the line width (default: 79).
+  --width N  Set the line width (default: 80).
 
 Examples:
   tools/format-statement solution.cpp

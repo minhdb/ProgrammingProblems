@@ -3,14 +3,10 @@
 #include <unordered_map>
 #include <vector>
 #include <limits>
-#include <sstream>
 #include <iostream>
 #include <iomanip>
-#include <cstdio>
-#include <utility>
 #include <cassert>
-#include <cstring>
-#include <string>
+#include <cstdint>
 
 using OpCodeTable = std::unordered_map<std::string, std::pair<uint8_t, bool>>;
 

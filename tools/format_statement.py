@@ -21,7 +21,7 @@ HEADING = re.compile(
     r'(?:\s+\d+)?(?:\s*\([^\n]*\))?|examples?(?:\s+\d+)?|'
     r'explanation|notes?|constraints|scoring|problem statement)\s*:?$', re.I
 )
-SAMPLE = re.compile(r'^(?:sample\s+(?:input|output)|(?:input|output)\s+(?:sample|example)|examples?)', re.I)
+SAMPLE = re.compile(r'^(?:sample\s+(?:input|output)|(?:input|output)\s+(?:sample|example))', re.I)
 EXPLANATION = re.compile(r'^(?:In this example\b|Explanation\s*:|Note\s*:)', re.I)
 URL = re.compile(r'^https?://\S+$')
 LIST_ITEM = re.compile(r'^\s*(?:[-+*]|\d+[.)])\s+')
@@ -182,7 +182,7 @@ def python_header(text, width):
     return text[:start] + formatted + text[end:]
 
 
-def format_source(text, filename, width=79):
+def format_source(text, filename, width=80):
     suffix = Path(filename).suffix.lower()
     if width < 20:
         raise FormatError('width must be at least 20')
@@ -201,7 +201,7 @@ def main(argv=None):
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument('--write', action='store_true', help='update the named files')
     mode.add_argument('--check', action='store_true', help='exit 1 if formatting is needed')
-    parser.add_argument('--width', type=int, default=79, help='line width including comment markers (default: 79)')
+    parser.add_argument('--width', type=int, default=80, help='line width including comment markers (default: 80)')
     parser.add_argument('--stdin-filename', help='read a buffer from stdin and use this filename to select the language')
     args = parser.parse_args(argv)
     if args.stdin_filename:
