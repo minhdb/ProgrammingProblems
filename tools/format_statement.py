@@ -163,19 +163,28 @@ def python_header(text, width):
     except (tokenize.TokenError, IndentationError) as error:
         raise FormatError(f'cannot read the opening docstring: {error.args[0]}') from error
 
-    prefix, quote = match.groups()
+    prefix, original_quote = match.groups()
     body = first.string[len(prefix) + 3:-3]
-    # Keep escape sequences literal; evaluating/requoting could change examples.
-    rows = reflow(body.splitlines(), width - len(prefix) - 3)
+    # Follow PEP 257: a one-line summary, a blank separator, then details.
+    # The first input line is kept as the summary; do not invent new content.
+    content_width = width - len(prefix) - 3
+    raw_rows = trim_blank_edges(body.splitlines())
+    if not raw_rows:
+        return text
+    rows = reflow([raw_rows[0]], content_width)
+    details = reflow(raw_rows[1:], content_width)
+    if details:
+        rows.extend(['', *details])
     if not rows:
         return text
+    # Use PEP 257's triple double quotes unless the body contains a delimiter
+    # that would require changing the docstring's literal content.
+    quote = '"""' if '"""' not in body else original_quote
     newline = '\r\n' if '\r\n' in first.string else '\n'
     if len(rows) == 1 and len(rows[0]) + len(prefix) + 6 <= width:
         formatted = prefix + quote + rows[0] + quote
     else:
-        if len(rows) > 1 and rows[1] and URL.fullmatch(rows[1]):
-            rows.insert(1, '')
-        formatted = prefix + quote + newline.join(rows) + newline + quote
+        formatted = prefix + quote + newline + newline.join(rows) + newline + quote
     lines = text.splitlines(keepends=True)
     start = sum(map(len, lines[:first.start[0] - 1])) + first.start[1]
     end = sum(map(len, lines[:first.end[0] - 1])) + first.end[1]
